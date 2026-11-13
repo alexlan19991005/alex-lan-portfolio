@@ -37,37 +37,37 @@
   },
   "experience": {
     "label": "// career",
-    "title": "Where I've worked.",
-    "description": "Building and scaling ML systems across search, ads, and feed ranking.",
+    "title": "My Professional Careers",
+    "description": "Working across recommendation, ranking, uplift modeling, and causal measurement.",
     "jobs": [
       {
-        "chip": "Ads",
-        "date": "2023 — Now",
+        "chip": "RecSys",
+        "date": "2024 — Now",
         "role": "Senior ML Engineer",
-        "company": "Large-scale Tech Platform",
-        "description": "Leading the ads ranking team. Redesigned the CTR prediction model with DCN-V2 features, improving AUC by 3.2%.",
-        "ariaLabel": "View details — Senior ML Engineer, Ads",
+        "company": "Bristol-Myers Squibb",
+        "description": "Leading the development of industry-first ranking and recommendation algorithms for commercial engagement.",
+        "ariaLabel": "View details — Senior ML Engineer",
         "kicker": "Experience · Ads",
         "area": "Ads ranking",
         "placeholderNote": "Team, scope, model design, and results."
       },
       {
-        "chip": "RecSys",
-        "date": "2020 — 2023",
-        "role": "Machine Learning Engineer",
-        "company": "E-commerce Platform",
-        "description": "Built the home-feed recommendation system with multi-objective ranking across CTR, CVR, and GMV.",
-        "ariaLabel": "View details — Machine Learning Engineer, RecSys",
+        "chip": "Ad Measurement",
+        "date": "2023",
+        "role": "Data Scientist",
+        "company": "Novo Nordisk",
+        "description": "Developed in-house customer- and DMA-level measurement frameworks and marketing mix modeling prototype.",
+        "ariaLabel": "View details — Data Scientist",
         "kicker": "Experience · RecSys",
         "area": "Recommendation",
         "placeholderNote": "Recall, ranking, and multi-objective trade-offs."
       },
       {
-        "chip": "Search",
-        "date": "2018 — 2020",
-        "role": "Algorithm Engineer",
-        "company": "Search & Discovery Startup",
-        "description": "Developed search relevance models from query understanding to LTR, and built the first recall pipeline.",
+        "chip": "Ranking & User Growth",
+        "date": "Pre 2023",
+        "role": "Various Data Science Internships",
+        "company": "WeightWatchers | Kuaishou Technology",
+        "description": "Assisted the team in evaluating CTR-based ad pricing models, assessing the effectiveness of multi-channel retrieval frameworks, and developing user retention models.",
         "ariaLabel": "View details — Algorithm Engineer, Search",
         "kicker": "Experience · Search",
         "area": "Search relevance",
@@ -76,32 +76,32 @@
     ]
   },
   "explore": {
-    "label": "// explore",
-    "title": "Learn more.",
-    "description": "Deeper reads on the areas I work in. Click a card to open its report.",
+    "label": "// projects",
+    "title": "My Work & Deliverables.",
+    "description": "Deeper reads on the areas I work in.",
     "cards": {
       "search": {
-        "tag": "Search",
-        "title": "The anatomy of search ranking",
-        "description": "From query understanding to learning-to-rank: how modern search systems decide what you see first.",
+        "tag": "Genrec",
+        "title": "Genrec Framework for Patient Event/Outcome Forecasting",
+        "description": "Generative transformer system for modeling and forecasting patient timelines from EHRs.",
         "imageAlt": "Abstract geometric line illustration with a green circle, a blue rectangle and a terracotta triangle on a beige background"
       },
       "ads": {
-        "tag": "Ads",
-        "title": "Prediction, pricing, and auctions",
-        "description": "CTR estimation, bid calibration, and the balancing act between revenue and relevance.",
+        "tag": "Recsys",
+        "title": "Multi-Objective Deep Network for Digital Engagement Optimization",
+        "description": "Multi-Objective Network to optimize who, when, and what content to send for BMS digital engagements.",
         "imageAlt": "Abstract geometric illustration with a blue dome, a terracotta column and a green triangle on a beige background"
       },
       "recsys": {
-        "tag": "RecSys",
-        "title": "Recommender algorithms in pharma",
-        "description": "How a multi-gate mixture-of-experts model powers next-best-action: one model, four goals, each goal choosing its own experts.",
+        "tag": "Uplift Modeling",
+        "title": "Uplift Modeling for Field Engagement Ranking and Recommendation",
+        "description": "R-Learner Uplift Modeling to estimate outcomes from field outreach and recommend engagement priorities.",
         "imageAlt": "Abstract geometric illustration with a large terracotta segmented circle, overlapping blue and white circles and a green triangle on a beige background"
       },
       "mlops": {
-        "tag": "MLOps",
-        "title": "Shipping models safely",
-        "description": "Feature stores, online serving, A/B testing, and the infrastructure behind production ML.",
+        "tag": "Marketing Mix",
+        "title": "Sequential Modeling Framework for Marketing Mix",
+        "description": "Sequential Modeling to Measure customer- / DMA- level Channel Promotional Effects.",
         "imageAlt": "Abstract geometric illustration with a large terracotta circle, blue panels, green triangles and yellow squares on a cream background"
       }
     }
@@ -141,36 +141,54 @@
       ]
     },
     "ads": {
-      "title": "[Placeholder] Prediction, pricing, and auctions",
-      "body": [
-        "This is placeholder body text for the ads and CTR prediction report. Replace this with your actual write-up about CTR estimation, calibration, and auction mechanisms.",
-        "More placeholder paragraphs go here. The layout mirrors an Anthropic research report."
-      ],
-      "publishedValue": "Placeholder date",
-      "teamValue": "Placeholder team",
-      "topics": [
-        "Placeholder topic A",
-        "Placeholder topic B",
-        "Placeholder topic C"
-      ]
-    },
-    "recsys": {
       "title": "Recommender Algorithms in Pharma: Bringing MMoE into Next-Best-Action",
       "sections": [
         {
           "heading": "The problem: budget goes to the wrong customers",
           "body": "Most targeting models rank customers by how likely they are to buy. The problem: the top of that list is full of people who would buy anyway. Budget flows to ‘sure things’ — customers who convert with or without our outreach — instead of the ‘persuadables’, the ones whose decision our message can actually change. Ranking by conversion probability cannot tell the two apart, so much of the spend buys nothing incremental.",
-          "caption": "Signal fades and noise grows as we move away from the email."
+          "figures": [
+            {
+              "alt": "Funnel from email sent to new prescription, with the signal fading at each step",
+              "caption": "Signal fades and noise grows as we move away from the email."
+            }
+          ]
         },
         {
           "heading": "The model: one MMoE, four tasks",
           "body": "Instead of one model per goal, we built a single model that predicts four things at once: new prescriptions, rep visits, clicks, and opt-outs. Four small expert networks do the work, and each goal gets its own gate that decides which experts to listen to. The goals share what they have in common and stay separate where they don’t. The dense signals — clicks and visits — also help the model learn about new prescriptions, which are far too rare to learn on their own.",
-          "caption": "MMoE inside an S-Learner uplift frame: one model, four tasks."
+          "figures": [
+            {
+              "src": "assets/mmoe-model-architecture.png",
+              "alt": "MMoE model architecture: customer features and treatment feed a shared tower, four experts, four per-task gates and four task heads",
+              "caption": "MMoE inside an S-Learner uplift frame: one model, four tasks."
+            },
+            {
+              "src": "assets/mmoe-data-grain-table.png",
+              "alt": "Customer by content by week table: sent, control and excluded rows, feature groups, towers and guardrails",
+              "caption": "One row is a customer, content and week. Sent and control rows feed the towers; guardrails keep the labels clean."
+            }
+          ]
         },
         {
           "heading": "Why it works: let each task choose its experts",
           "body": "When several goals share one network, they fight over it: improving one goal can make another worse — a seesaw effect. Per-task gates fix this. The gates learn from the data how much to share: goals that agree share experts, goals that conflict use different ones. The same gate can even route two different customers to different experts, because the right mix depends on the customer and the content.",
-          "caption": "When gradients conflict, the sum can point uphill for one task. Per-task gates let each task choose its experts."
+          "figures": [
+            {
+              "src": "assets/mmoe-gradient-conflict.png",
+              "alt": "Shared-bottom gradient conflict: two task gradients pull the shared parameters in different directions, with gradient-direction and seesaw panels",
+              "caption": "When gradients conflict, the shared update can point uphill for one task."
+            },
+            {
+              "src": "assets/mmoe-gate-routing.png",
+              "alt": "Gate routing for two customer-content pairs: the same NBRx gate weights experts differently for an existing user and a non-user",
+              "caption": "Same gate, different row, different weights: Case A leans on Expert 1, Case B on Expert 3."
+            },
+            {
+              "src": "assets/mmoe-backprop.png",
+              "alt": "MMoE four-task backprop: each task loss returns through its own gate, and the four gradients meet only at the shared experts",
+              "caption": "Four losses, four gates, one shared stack: gradients meet only at the experts."
+            }
+          ]
         }
       ],
       "mediumText": "Read the full article on Medium →",
@@ -181,6 +199,20 @@
         "MMoE",
         "Uplift modeling",
         "Next-Best-Action"
+      ]
+    },
+    "recsys": {
+      "title": "[Placeholder] Patterns in recommendation",
+      "body": [
+        "This is placeholder body text for the recommendation report. Replace this with your actual write-up about user modeling, graph-based recall, and multi-objective ranking.",
+        "More placeholder paragraphs go here. The layout mirrors an Anthropic research report."
+      ],
+      "publishedValue": "Placeholder date",
+      "teamValue": "Placeholder team",
+      "topics": [
+        "Placeholder topic A",
+        "Placeholder topic B",
+        "Placeholder topic C"
       ]
     },
     "mlops": {
