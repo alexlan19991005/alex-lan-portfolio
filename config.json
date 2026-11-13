@@ -37,37 +37,37 @@
   },
   "experience": {
     "label": "// career",
-    "title": "My Professional Careers",
-    "description": "Working across recommendation, ranking, uplift modeling, and causal measurement.",
+    "title": "Where I've worked.",
+    "description": "Building and scaling ML systems across search, ads, and feed ranking.",
     "jobs": [
       {
-        "chip": "RecSys",
-        "date": "2024 — Now",
+        "chip": "Ads",
+        "date": "2023 — Now",
         "role": "Senior ML Engineer",
-        "company": "Bristol-Myers Squibb",
-        "description": "Leading the development of industry-first ranking and recommendation algorithms for commercial engagement.",
-        "ariaLabel": "View details — Senior ML Engineer",
+        "company": "Large-scale Tech Platform",
+        "description": "Leading the ads ranking team. Redesigned the CTR prediction model with DCN-V2 features, improving AUC by 3.2%.",
+        "ariaLabel": "View details — Senior ML Engineer, Ads",
         "kicker": "Experience · Ads",
         "area": "Ads ranking",
         "placeholderNote": "Team, scope, model design, and results."
       },
       {
-        "chip": "Ad Measurement",
-        "date": "2023",
-        "role": "Data Scientist",
-        "company": "Novo Nordisk",
-        "description": "Developed in-house customer- and DMA-level measurement frameworks and marketing mix modeling prototype.",
-        "ariaLabel": "View details — Data Scientist",
+        "chip": "RecSys",
+        "date": "2020 — 2023",
+        "role": "Machine Learning Engineer",
+        "company": "E-commerce Platform",
+        "description": "Built the home-feed recommendation system with multi-objective ranking across CTR, CVR, and GMV.",
+        "ariaLabel": "View details — Machine Learning Engineer, RecSys",
         "kicker": "Experience · RecSys",
         "area": "Recommendation",
         "placeholderNote": "Recall, ranking, and multi-objective trade-offs."
       },
       {
-        "chip": "Ranking & User Growth",
-        "date": "Pre 2023",
-        "role": "Various Data Science Internships",
-        "company": "WeightWatchers | Kuaishou Technology",
-        "description": "Assisted the team in evaluating CTR-based ad pricing models, assessing the effectiveness of multi-channel retrieval frameworks, and developing user retention models.",
+        "chip": "Search",
+        "date": "2018 — 2020",
+        "role": "Algorithm Engineer",
+        "company": "Search & Discovery Startup",
+        "description": "Developed search relevance models from query understanding to LTR, and built the first recall pipeline.",
         "ariaLabel": "View details — Algorithm Engineer, Search",
         "kicker": "Experience · Search",
         "area": "Search relevance",
@@ -76,32 +76,32 @@
     ]
   },
   "explore": {
-    "label": "// projects",
-    "title": "My Work & Deliverables.",
-    "description": "Deeper reads on the areas I work in.",
+    "label": "// explore",
+    "title": "Learn more.",
+    "description": "Deeper reads on the areas I work in. Click a card to open its report.",
     "cards": {
       "search": {
-        "tag": "Genrec",
-        "title": "Genrec Framework for Patient Event/Outcome Forecasting",
-        "description": "Generative transformer system for modeling and forecasting patient timelines from EHRs.",
+        "tag": "Search",
+        "title": "The anatomy of search ranking",
+        "description": "From query understanding to learning-to-rank: how modern search systems decide what you see first.",
         "imageAlt": "Abstract geometric line illustration with a green circle, a blue rectangle and a terracotta triangle on a beige background"
       },
       "ads": {
-        "tag": "Recsys",
-        "title": "Multi-Objective Deep Network for Digital Engagement Optimization",
-        "description": "Multi-Objective Network to optimize who, when, and what content to send for BMS digital engagements.",
+        "tag": "Ads",
+        "title": "Prediction, pricing, and auctions",
+        "description": "CTR estimation, bid calibration, and the balancing act between revenue and relevance.",
         "imageAlt": "Abstract geometric illustration with a blue dome, a terracotta column and a green triangle on a beige background"
       },
       "recsys": {
-        "tag": "Uplift Modeling",
-        "title": "Uplift Modeling for Field Engagement Ranking and Recommendation",
-        "description": "R-Learner Uplift Modeling to estimate outcomes from field outreach and recommend engagement priorities.",
+        "tag": "RecSys",
+        "title": "Recommender algorithms in pharma",
+        "description": "How a multi-gate mixture-of-experts model powers next-best-action: one model, four goals, each goal choosing its own experts.",
         "imageAlt": "Abstract geometric illustration with a large terracotta segmented circle, overlapping blue and white circles and a green triangle on a beige background"
       },
       "mlops": {
-        "tag": "Marketing Mix",
-        "title": "Sequential Modeling Framework for Marketing Mix",
-        "description": "Sequential Modeling to Measure customer- / DMA- level Channel Promotional Effects.",
+        "tag": "MLOps",
+        "title": "Shipping models safely",
+        "description": "Feature stores, online serving, A/B testing, and the infrastructure behind production ML.",
         "imageAlt": "Abstract geometric illustration with a large terracotta circle, blue panels, green triangles and yellow squares on a cream background"
       }
     }
@@ -155,17 +155,32 @@
       ]
     },
     "recsys": {
-      "title": "[Placeholder] Patterns in recommendation",
-      "body": [
-        "This is placeholder body text for the recommendation report. Replace this with your actual write-up about user modeling, graph-based recall, and multi-objective ranking.",
-        "More placeholder paragraphs go here. The layout mirrors an Anthropic research report."
+      "title": "Recommender Algorithms in Pharma: Bringing MMoE into Next-Best-Action",
+      "sections": [
+        {
+          "heading": "The problem: budget goes to the wrong customers",
+          "body": "Most targeting models rank customers by how likely they are to buy. The problem: the top of that list is full of people who would buy anyway. Budget flows to ‘sure things’ — customers who convert with or without our outreach — instead of the ‘persuadables’, the ones whose decision our message can actually change. Ranking by conversion probability cannot tell the two apart, so much of the spend buys nothing incremental.",
+          "caption": "Signal fades and noise grows as we move away from the email."
+        },
+        {
+          "heading": "The model: one MMoE, four tasks",
+          "body": "Instead of one model per goal, we built a single model that predicts four things at once: new prescriptions, rep visits, clicks, and opt-outs. Four small expert networks do the work, and each goal gets its own gate that decides which experts to listen to. The goals share what they have in common and stay separate where they don’t. The dense signals — clicks and visits — also help the model learn about new prescriptions, which are far too rare to learn on their own.",
+          "caption": "MMoE inside an S-Learner uplift frame: one model, four tasks."
+        },
+        {
+          "heading": "Why it works: let each task choose its experts",
+          "body": "When several goals share one network, they fight over it: improving one goal can make another worse — a seesaw effect. Per-task gates fix this. The gates learn from the data how much to share: goals that agree share experts, goals that conflict use different ones. The same gate can even route two different customers to different experts, because the right mix depends on the customer and the content.",
+          "caption": "When gradients conflict, the sum can point uphill for one task. Per-task gates let each task choose its experts."
+        }
       ],
-      "publishedValue": "Placeholder date",
-      "teamValue": "Placeholder team",
+      "mediumText": "Read the full article on Medium →",
+      "mediumUrl": "https://medium.com/@kl3411/recommendation-algorithms-in-pharma-commercialization-integrating-the-mmoe-framework-into-822f163d9cd9",
+      "publishedValue": "October 2026",
+      "teamValue": "Bristol Myers Squibb",
       "topics": [
-        "Placeholder topic A",
-        "Placeholder topic B",
-        "Placeholder topic C"
+        "MMoE",
+        "Uplift modeling",
+        "Next-Best-Action"
       ]
     },
     "mlops": {
