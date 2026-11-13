@@ -37,16 +37,16 @@
   },
   "experience": {
     "label": "// career",
-    "title": "Where I've worked.",
-    "description": "Building and scaling ML systems across search, ads, and feed ranking.",
+    "title": "My Professional Careers",
+    "description": "Working across recommendation, ranking, uplift modeling, and causal measurement.",
     "jobs": [
       {
-        "chip": "Ads",
-        "date": "2023 — Now",
+        "chip": "RecSys",
+        "date": "2024 — Now",
         "role": "Senior ML Engineer",
-        "company": "Large-scale Tech Platform",
-        "description": "Leading the ads ranking team. Redesigned the CTR prediction model with DCN-V2 features, improving AUC by 3.2%.",
-        "ariaLabel": "View details — Senior ML Engineer, Ads",
+        "company": "Bristol-Myers Squibb",
+        "description": "Leading the development of industry-first ranking and recommendation algorithms for commercial engagement.",
+        "ariaLabel": "View details — Senior ML Engineer",
         "kicker": "Experience · Ads",
         "area": "Ads ranking",
         "placeholderNote": "Team, scope, model design, and results."
