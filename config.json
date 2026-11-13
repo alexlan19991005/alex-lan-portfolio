@@ -1,0 +1,289 @@
+{
+  "_note": "HOW TO EDIT THIS FILE - this file holds all the words on the site. To change any text, edit the value (the text after the colon) and save. The live site updates automatically after Vercel redeploys. Rules: (1) Change values only - do not rename keys, do not delete keys, and do not change the brackets, braces, or commas. (2) A few values contain simple tags like <b>...</b> (bold) or <strong>...</strong> - keep the tags around the words you want bold. (3) \"&amp;\" means \"&\". (4) Lists have a fixed number of entries (for example the 12 skills) - adding a new line here will not add a new item on the page. The page layout, colors, and structure live in index.html and are not changed by this file.",
+  "page": {
+    "title": "Alex Lan — Machine Learning Engineer"
+  },
+  "nav": {
+    "learnMore": "Learn more",
+    "resume": "Résumé"
+  },
+  "hero": {
+    "eyebrow": "Machine Learning Engineer",
+    "title": "Alex Lan",
+    "subtitle": "I am a machine learning engineer at <b>Bristol Myers Squibb</b>, developing <b>ranking and recommendation</b> algorithms to help our commercial initiatives reach valuable customers with personalized content.",
+    "imageAlt": "Deep-blue illustration of Alex resting his chin on his hand at a desk with a laptop, a lamp and a drink, against a striped wall",
+    "meta": [
+      {
+        "label": "Company",
+        "value": "Bristol Myers Squibb",
+        "logoAlt": "Bristol Myers Squibb logo"
+      },
+      {
+        "label": "Education",
+        "value": "M.S., Business Analytics, Columbia University",
+        "logoAlt": "Columbia University crown logo"
+      },
+      {
+        "label": "LinkedIn",
+        "text": "linkedin.com/in/alex-ke-lan",
+        "url": "https://www.linkedin.com/in/alex-ke-lan/"
+      },
+      {
+        "label": "GitHub",
+        "text": "github.com/alexlan19991005",
+        "url": "https://github.com/alexlan19991005"
+      }
+    ]
+  },
+  "experience": {
+    "label": "// career",
+    "title": "Where I've worked.",
+    "description": "Building and scaling ML systems across search, ads, and feed ranking.",
+    "jobs": [
+      {
+        "chip": "Ads",
+        "date": "2023 — Now",
+        "role": "Senior ML Engineer",
+        "company": "Large-scale Tech Platform",
+        "description": "Leading the ads ranking team. Redesigned the CTR prediction model with DCN-V2 features, improving AUC by 3.2%.",
+        "ariaLabel": "View details — Senior ML Engineer, Ads",
+        "kicker": "Experience · Ads",
+        "area": "Ads ranking",
+        "placeholderNote": "Team, scope, model design, and results."
+      },
+      {
+        "chip": "RecSys",
+        "date": "2020 — 2023",
+        "role": "Machine Learning Engineer",
+        "company": "E-commerce Platform",
+        "description": "Built the home-feed recommendation system with multi-objective ranking across CTR, CVR, and GMV.",
+        "ariaLabel": "View details — Machine Learning Engineer, RecSys",
+        "kicker": "Experience · RecSys",
+        "area": "Recommendation",
+        "placeholderNote": "Recall, ranking, and multi-objective trade-offs."
+      },
+      {
+        "chip": "Search",
+        "date": "2018 — 2020",
+        "role": "Algorithm Engineer",
+        "company": "Search & Discovery Startup",
+        "description": "Developed search relevance models from query understanding to LTR, and built the first recall pipeline.",
+        "ariaLabel": "View details — Algorithm Engineer, Search",
+        "kicker": "Experience · Search",
+        "area": "Search relevance",
+        "placeholderNote": "Query understanding, LTR, and the first recall pipeline."
+      }
+    ]
+  },
+  "explore": {
+    "label": "// explore",
+    "title": "Learn more.",
+    "description": "Deeper reads on the areas I work in. Click a card to open its report.",
+    "cards": {
+      "search": {
+        "tag": "Search",
+        "title": "The anatomy of search ranking",
+        "description": "From query understanding to learning-to-rank: how modern search systems decide what you see first.",
+        "imageAlt": "Abstract geometric line illustration with a green circle, a blue rectangle and a terracotta triangle on a beige background"
+      },
+      "ads": {
+        "tag": "Ads",
+        "title": "Prediction, pricing, and auctions",
+        "description": "CTR estimation, bid calibration, and the balancing act between revenue and relevance.",
+        "imageAlt": "Abstract geometric illustration with a blue dome, a terracotta column and a green triangle on a beige background"
+      },
+      "recsys": {
+        "tag": "RecSys",
+        "title": "Patterns in recommendation",
+        "description": "User modeling, graph-based recall, and multi-objective ranking for discovery feeds.",
+        "imageAlt": "Abstract geometric illustration with a large terracotta segmented circle, overlapping blue and white circles and a green triangle on a beige background"
+      },
+      "mlops": {
+        "tag": "MLOps",
+        "title": "Shipping models safely",
+        "description": "Feature stores, online serving, A/B testing, and the infrastructure behind production ML.",
+        "imageAlt": "Abstract geometric illustration with a large terracotta circle, blue panels, green triangles and yellow squares on a cream background"
+      }
+    }
+  },
+  "skills": {
+    "label": "// toolkit",
+    "title": "Skills & stack.",
+    "description": "The tools and frameworks I use to build and ship ML systems.",
+    "items": [
+      "Python",
+      "PyTorch",
+      "TensorFlow",
+      "Spark",
+      "C++",
+      "SQL / Hive",
+      "Docker / K8s",
+      "Feature Store",
+      "Two-Tower Models",
+      "Learning to Rank",
+      "A/B Testing",
+      "Graph Neural Nets"
+    ]
+  },
+  "reports": {
+    "search": {
+      "title": "[Placeholder] The anatomy of search ranking",
+      "body": [
+        "This is placeholder body text for the search ranking report. Replace this with your actual write-up about query understanding, retrieval, and learning-to-rank.",
+        "More placeholder paragraphs go here. The layout mirrors an Anthropic research report: a centered headline, a large figure, and a right-hand metadata rail with published date, team, and topics."
+      ],
+      "publishedValue": "Placeholder date",
+      "teamValue": "Placeholder team",
+      "topics": [
+        "Placeholder topic A",
+        "Placeholder topic B",
+        "Placeholder topic C"
+      ]
+    },
+    "ads": {
+      "title": "[Placeholder] Prediction, pricing, and auctions",
+      "body": [
+        "This is placeholder body text for the ads and CTR prediction report. Replace this with your actual write-up about CTR estimation, calibration, and auction mechanisms.",
+        "More placeholder paragraphs go here. The layout mirrors an Anthropic research report."
+      ],
+      "publishedValue": "Placeholder date",
+      "teamValue": "Placeholder team",
+      "topics": [
+        "Placeholder topic A",
+        "Placeholder topic B",
+        "Placeholder topic C"
+      ]
+    },
+    "recsys": {
+      "title": "[Placeholder] Patterns in recommendation",
+      "body": [
+        "This is placeholder body text for the recommendation report. Replace this with your actual write-up about user modeling, graph-based recall, and multi-objective ranking.",
+        "More placeholder paragraphs go here. The layout mirrors an Anthropic research report."
+      ],
+      "publishedValue": "Placeholder date",
+      "teamValue": "Placeholder team",
+      "topics": [
+        "Placeholder topic A",
+        "Placeholder topic B",
+        "Placeholder topic C"
+      ]
+    },
+    "mlops": {
+      "title": "[Placeholder] Shipping models safely",
+      "body": [
+        "This is placeholder body text for the MLOps report. Replace this with your actual write-up about feature stores, online serving, and A/B testing.",
+        "More placeholder paragraphs go here. The layout mirrors an Anthropic research report."
+      ],
+      "publishedValue": "Placeholder date",
+      "teamValue": "Placeholder team",
+      "topics": [
+        "Placeholder topic A",
+        "Placeholder topic B",
+        "Placeholder topic C"
+      ]
+    }
+  },
+  "resume": {
+    "kicker": "Résumé",
+    "name": "Alex Lan",
+    "title": "Senior Machine Learning Engineer, AI Predictive Solutions",
+    "contact": {
+      "location": "Jersey City, NJ",
+      "email": "alexlan1005@gmail.com",
+      "emailUrl": "mailto:alexlan1005@gmail.com",
+      "phone": "(857)-316-5572",
+      "linkedin": "linkedin.com/in/alex-ke-lan",
+      "linkedinUrl": "https://www.linkedin.com/in/alex-ke-lan/"
+    },
+    "experienceLabel": "Professional Experience",
+    "jobs": [
+      {
+        "company": "Bristol Myers Squibb",
+        "location": "Princeton, NJ",
+        "role": "Senior Machine Learning Engineer, AI Predictive Solutions",
+        "date": "Feb 2024 — Present",
+        "bullets": [
+          "Contributed to prototyping and scaling ML systems for customer engagement prediction and promotional content personalization; staged rollout showed stronger performance than existing organic and event-driven strategies, supporting deployment across the U.S. portfolio and $9M in annual marketing spend.",
+          "<strong>Field Engagement Recommendation:</strong> Participated in developing uplift modeling framework to estimate the effect of field reach on customers' conversion and usage frequency, built regional optimization algorithms with feedback loop to automate weekly field engagement recommendations; scaled the solution to 6 product lines with development tailored to each product's market landscape and sales structure.",
+          "<strong>Model Evaluation Framework:</strong> Designed the model evaluation framework for the orchestration system, combining time-based offline validation, uplift evaluation (Qini/AUUC), and calibration checks with online holdout and A/B testing, using opt-outs as a guardrail metric to support model release decisions.",
+          "<strong>Digital Engagement Orchestration:</strong> Architected the next-generation digital orchestration system, decoupling channel delivery from uplift modeling and leveraging a shared-bottom multi-task DCN-v2 framework; integrated multi-funnel objectives (clicks/opens, site engagement, and rep follow-up success) to enable robust upper-funnel estimation and facilitate content selection.",
+          "<strong>Content Exploration &amp; Cold-Start Solution:</strong> In support of the AI Content Hub, designed SBERT subject-line embeddings, ID embeddings, and a Thompson sampling bandit framework to address cold start problems and enable exploration of new content, allowing new content to be tested and activated efficiently within the existing digital orchestration system.",
+          "<strong>MLOps &amp; Infra:</strong> Collaborated with the AI Infra team to continuously improve repo tooling: introduced Dagster for pipeline orchestration, Databricks MLflow for experiment tracking, and Lakehouse Monitoring, while enhancing unit and integration test robustness. Established repo-level agent usage guidelines and Skills following enterprise Claude adoption."
+        ]
+      },
+      {
+        "company": "Novo Nordisk",
+        "location": "Plainsboro, NJ",
+        "role": "Data Science Intern, Advanced Analytics",
+        "date": "Jun 2023 — Dec 2023",
+        "bullets": [
+          "Developed in-house causal inference toolkits for customer- and geo-level campaign efficacy measurement. The toolkit supported six H2 2023 analyses and remains in use and is maintained by the team, reducing reliance on external vendors.",
+          "Standardized customer-level campaign evaluation with config-driven propensity-score matching and inverse-propensity weighting workflows that support multiple modeling algorithms for propensity scoring and automated statistical validation of covariate balance between test and control groups.",
+          "Automated geo-level campaign measurement that takes a campaign window and DMA list as input and outputs difference-in-differences and synthetic control estimates with pre-period fit diagnostics and plots."
+        ]
+      },
+      {
+        "company": "WeightWatchers",
+        "location": "New York, NY",
+        "role": "Data Science Intern, GTM Science",
+        "date": "Jan 2023 — May 2023",
+        "bullets": [
+          "Supported development of Experience Engine, an ML system that predicts member disengagement risk and content affinity; conducted feature selection and model benchmarking to inform final model selection."
+        ]
+      }
+    ],
+    "educationLabel": "Education",
+    "education": [
+      {
+        "school": "Columbia University",
+        "location": "New York, NY",
+        "degree": "M.S. in Business Analytics",
+        "date": "2022 — 2023"
+      },
+      {
+        "school": "Boston University",
+        "location": "Boston, MA",
+        "degree": "B.A. in Economics and Statistics",
+        "date": "2018 — 2021"
+      }
+    ],
+    "skillsLabel": "Skills",
+    "skills": [
+      {
+        "label": "Modeling",
+        "text": "Machine learning, deep learning, multi-task learning, ranking algorithms, uplift modeling, bandits, NLP and embeddings"
+      },
+      {
+        "label": "Causal Inference & Measurement",
+        "text": "A/B testing, propensity-score methods, DiD, synthetic control, marketing-mix modeling"
+      },
+      {
+        "label": "Data & MLOps",
+        "text": "Python, SQL, Spark, Databricks, MLflow, Dagster, Kedro, CI/CD, lakehouse monitoring"
+      }
+    ],
+    "cta": "Start with Learn more →"
+  },
+  "shared": {
+    "back": "← Back",
+    "backToHome": "← Back to home",
+    "viewDetails": "View details",
+    "detailsComingSoon": "Details coming soon",
+    "placeholderPage": "Placeholder page — the full write-up for this role will go here.",
+    "previous": "← Previous",
+    "next": "Next",
+    "resume": "Résumé",
+    "reportKicker": "Research report",
+    "overview": "Overview",
+    "published": "Published",
+    "team": "Team",
+    "topics": "Topics",
+    "seeMore": "See more...",
+    "swipeHint": "← swipe →",
+    "area": "Area",
+    "sequenceAriaLabel": "Learn more — in order"
+  },
+  "footer": {
+    "text": "© 2026 Alex Lan. Built with precision."
+  }
+}
