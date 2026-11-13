@@ -161,11 +161,6 @@
               "src": "assets/mmoe-model-architecture.png",
               "alt": "MMoE model architecture: customer features and treatment feed a shared tower, four experts, four per-task gates and four task heads",
               "caption": "MMoE inside an S-Learner uplift frame: one model, four tasks."
-            },
-            {
-              "src": "assets/mmoe-data-grain-table.png",
-              "alt": "Customer by content by week table: sent, control and excluded rows, feature groups, towers and guardrails",
-              "caption": "One row is a customer, content and week. Sent and control rows feed the towers; guardrails keep the labels clean."
             }
           ]
         },
@@ -182,11 +177,6 @@
               "src": "assets/mmoe-gate-routing.png",
               "alt": "Gate routing for two customer-content pairs: the same NBRx gate weights experts differently for an existing user and a non-user",
               "caption": "Same gate, different row, different weights: Case A leans on Expert 1, Case B on Expert 3."
-            },
-            {
-              "src": "assets/mmoe-backprop.png",
-              "alt": "MMoE four-task backprop: each task loss returns through its own gate, and the four gradients meet only at the shared experts",
-              "caption": "Four losses, four gates, one shared stack: gradients meet only at the experts."
             }
           ]
         }

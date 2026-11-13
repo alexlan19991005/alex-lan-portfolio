@@ -1633,10 +1633,6 @@ footer p{
             <a href="assets/mmoe-model-architecture.png" target="_blank" rel="noopener"><img src="assets/mmoe-model-architecture.png" data-cfg-alt="reports.ads.sections.1.figures.0.alt" alt=""></a>
             <figcaption data-cfg="reports.ads.sections.1.figures.0.caption"></figcaption>
           </figure>
-          <figure class="report-diagram">
-            <a href="assets/mmoe-data-grain-table.png" target="_blank" rel="noopener"><img src="assets/mmoe-data-grain-table.png" data-cfg-alt="reports.ads.sections.1.figures.1.alt" alt=""></a>
-            <figcaption data-cfg="reports.ads.sections.1.figures.1.caption"></figcaption>
-          </figure>
         </section>
         <section class="report-section">
           <h3 data-cfg="reports.ads.sections.2.heading"></h3>
@@ -1648,10 +1644,6 @@ footer p{
           <figure class="report-diagram">
             <a href="assets/mmoe-gate-routing.png" target="_blank" rel="noopener"><img src="assets/mmoe-gate-routing.png" data-cfg-alt="reports.ads.sections.2.figures.1.alt" alt=""></a>
             <figcaption data-cfg="reports.ads.sections.2.figures.1.caption"></figcaption>
-          </figure>
-          <figure class="report-diagram">
-            <a href="assets/mmoe-backprop.png" target="_blank" rel="noopener"><img src="assets/mmoe-backprop.png" data-cfg-alt="reports.ads.sections.2.figures.2.alt" alt=""></a>
-            <figcaption data-cfg="reports.ads.sections.2.figures.2.caption"></figcaption>
           </figure>
         </section>
         <p class="report-medium-link"><a href="https://medium.com/@kl3411/recommendation-algorithms-in-pharma-commercialization-integrating-the-mmoe-framework-into-822f163d9cd9" target="_blank" rel="noopener" data-cfg="reports.ads.mediumText" data-cfg-href="reports.ads.mediumUrl"></a></p>
@@ -2057,11 +2049,6 @@ footer p{
               "src": "assets/mmoe-model-architecture.png",
               "alt": "MMoE model architecture: customer features and treatment feed a shared tower, four experts, four per-task gates and four task heads",
               "caption": "MMoE inside an S-Learner uplift frame: one model, four tasks."
-            },
-            {
-              "src": "assets/mmoe-data-grain-table.png",
-              "alt": "Customer by content by week table: sent, control and excluded rows, feature groups, towers and guardrails",
-              "caption": "One row is a customer, content and week. Sent and control rows feed the towers; guardrails keep the labels clean."
             }
           ]
         },
@@ -2078,11 +2065,6 @@ footer p{
               "src": "assets/mmoe-gate-routing.png",
               "alt": "Gate routing for two customer-content pairs: the same NBRx gate weights experts differently for an existing user and a non-user",
               "caption": "Same gate, different row, different weights: Case A leans on Expert 1, Case B on Expert 3."
-            },
-            {
-              "src": "assets/mmoe-backprop.png",
-              "alt": "MMoE four-task backprop: each task loss returns through its own gate, and the four gradients meet only at the shared experts",
-              "caption": "Four losses, four gates, one shared stack: gradients meet only at the experts."
             }
           ]
         }
