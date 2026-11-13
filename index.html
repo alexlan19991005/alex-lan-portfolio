@@ -2039,10 +2039,41 @@ footer p{
   },
   "reports": {
     "search": {
-      "title": "[Placeholder] The anatomy of search ranking",
-      "body": [
-        "This is placeholder body text for the search ranking report. Replace this with your actual write-up about query understanding, retrieval, and learning-to-rank.",
-        "More placeholder paragraphs go here. The layout mirrors an Anthropic research report: a centered headline and a large figure."
+      "title": "Forecasting the Next Patient Event with Next-Token Pretraining",
+      "sections": [
+        {
+          "heading": "The problem: a patient history is a long, irregular timeline",
+          "body": "A patient's history is not a neat table. It is a long, irregular timeline: diagnoses, prescriptions and procedures, scattered across years, with gaps of days or months between events. Traditional models flatten this timeline into hand-built features, counts and recency flags, and in doing so they discard the order and timing of events, which carry most of the signal. The question this model answers is simple: can we read the whole history as it happened, and forecast what comes next?",
+          "figures": [
+            {
+              "src": "assets/genrec-fig1-claims-to-tokens.svg",
+              "alt": "From claims to tokens: a patient's diagnoses, prescriptions and procedures on a timeline, each mapped to a token id, forming one sequence of the last 2,048 tokens",
+              "caption": "From claims to tokens"
+            }
+          ]
+        },
+        {
+          "heading": "The model: claims become tokens, the model reads them in order",
+          "body": "Every claim becomes one token from the OMOP standard vocabulary: a diagnosis, a prescription, a procedure, each with its own id. A patient's history becomes a sequence of tokens, the most recent 2,048 of them. Each token is embedded with a frozen MedRep table, 768 dimensions per code, so codes that mean similar things sit close together, then a linear adapter projects it to 512 dimensions. Time gets its own embedding: the gap since each event is bucketed into 11 bins, from 1 day to 1,460 days, so each event carries both what it was and how long ago it occurred. Twelve identical blocks read the sequence left to right; a Mamba mixer carries information forward from earlier events, updating its memory as it reads, and SwiGLU reworks what was read at each position. The last real position, plus the patient's age, becomes one patient vector, and three heads produce three different predictions from it: a binary head for will it happen, a discrete-hazard head for when, and a count head for how many.",
+          "figures": [
+            {
+              "src": "assets/genrec-fig2-forward-pass.svg",
+              "alt": "One forward pass: token ids and day deltas flow through a frozen MedRep embedding and a log-time embedding, a linear adapter to 512 dimensions, 12 pre-norm residual blocks with Mamba mixer and SwiGLU, then pooling of the last real position plus age into three heads",
+              "caption": "One forward pass"
+            }
+          ]
+        },
+        {
+          "heading": "Pretrain once, then finetune and calibrate per outcome",
+          "body": "The backbone is pretrained once, by next-token prediction on millions of patient histories: predict the next event, and in doing so learn the patterns of how diseases and treatments progress. Each outcome then gets its own head and its own finetune, with the whole backbone tuned together. A raw score is not a probability, so every head is calibrated with isotonic regression before it ships, and patients are rolled up to the HCP level for the field. Nothing reaches production on a metric alone: each candidate is gated, scored on AUC, calibration and precision at k, and a human promotes the challenger to production. One backbone serves many forecasts, and every reported probability is calibrated.",
+          "figures": [
+            {
+              "src": "assets/genrec-fig3-pretrain-to-prod.svg",
+              "alt": "Pretrain once, then finetune and calibrate per outcome: pretrain by next-token prediction, finetune per head, calibrate with forward isotonic, gate and evaluate, human promotes to production; patient probabilities roll up to HCP scores and a field priority list",
+              "caption": "Pretrain once, then finetune and calibrate per outcome"
+            }
+          ]
+        }
       ]
     },
     "ads": {
@@ -2050,7 +2081,7 @@ footer p{
       "sections": [
         {
           "heading": "The problem: budget goes to the wrong customers",
-          "body": "Most targeting models rank customers by how likely they are to buy. The problem: the top of that list is full of people who would buy anyway. Budget flows to ‘sure things’ — customers who convert with or without our outreach — instead of the ‘persuadables’, the ones whose decision our message can actually change. Ranking by conversion probability cannot tell the two apart, so much of the spend buys nothing incremental.",
+          "body": "Most targeting models rank customers by how likely they are to buy. The problem: the top of that list is full of people who would buy anyway. Budget goes to customers who convert with or without our outreach, instead of customers whose decision our message can actually change. Ranking by conversion probability cannot tell the two apart, so much of the spend has no incremental effect.",
           "figures": [
             {
               "alt": "Funnel from email sent to new prescription, with the signal fading at each step",
@@ -2060,7 +2091,7 @@ footer p{
         },
         {
           "heading": "The model: one MMoE, four tasks",
-          "body": "Instead of one model per goal, we built a single model that predicts four things at once: new prescriptions, rep visits, clicks, and opt-outs. Four small expert networks do the work, and each goal gets its own gate that decides which experts to listen to. The goals share what they have in common and stay separate where they don’t. The dense signals — clicks and visits — also help the model learn about new prescriptions, which are far too rare to learn on their own.",
+          "body": "Instead of one model per goal, we built a single model that predicts four things at once: new prescriptions, rep visits, clicks, and opt-outs. Four small expert networks do the work, and each goal has its own gate that controls which experts it uses. The goals share experts where they behave alike and stay separate where they do not. The dense signals, clicks and visits, also help the model learn about new prescriptions, which are far too rare to learn on their own.",
           "figures": [
             {
               "src": "assets/mmoe-model-architecture.png",
@@ -2070,8 +2101,8 @@ footer p{
           ]
         },
         {
-          "heading": "Why it works: let each task choose its experts",
-          "body": "When several goals share one network, they fight over it: improving one goal can make another worse — a seesaw effect. Per-task gates fix this. The gates learn from the data how much to share: goals that agree share experts, goals that conflict use different ones. The same gate can even route two different customers to different experts, because the right mix depends on the customer and the content.",
+          "heading": "Why it works: each task gets its own gate",
+          "body": "When several goals share one network, they interfere with each other: improving one goal can make another worse. Per-task gates fix this. The gates learn from the data how much to share: goals with similar patterns share experts, goals with conflicting patterns use different ones. The same gate can route two different customers to different experts, because the right mix depends on the customer and the content.",
           "figures": [
             {
               "src": "assets/mmoe-gradient-conflict.png",
@@ -2094,7 +2125,7 @@ footer p{
       "sections": [
         {
           "heading": "The problem: visits go to the wrong HCPs",
-          "body": "Most field plans rank HCPs by how likely they are to prescribe and send reps to the top of the list. The problem: the top of that list is full of people who would prescribe anyway, ‘sure things’ who convert with or without a visit. Rep time flows to them instead of the ‘persuadables’, the ones whose decision a visit can actually change. Ranking by prescribing probability cannot tell the two apart, so much of the field budget buys nothing incremental.",
+          "body": "Most field plans rank HCPs by how likely they are to prescribe and send reps to the top of the list. The problem: the top of that list is full of people who would prescribe anyway, people who convert with or without a visit. Rep time goes to them instead of the HCPs whose decision a visit can actually change. Ranking by prescribing probability cannot tell the two apart, so much of the field budget has no incremental effect.",
           "figures": [
             {
               "src": "assets/rlearner-why-r-wins.svg",
@@ -2105,7 +2136,7 @@ footer p{
         },
         {
           "heading": "The model: R-learner estimates the effect directly",
-          "body": "Instead of the S-learner, one model that predicts the outcome and takes a difference, R-learner works in two stages. Stage 1 fits two models: m(x), how much this HCP prescribes, and e(x), how likely this HCP is to be visited. Stage 2 fits the effect on what is left over, through the R-loss: the outcome residual (Y - m(x)) against the treatment residual (t - e(x)). Those residuals are the quasi-random variation, visits the targeting rule did not predict, so the effect it learns is the visit’s own effect, not the HCP’s baseline.",
+          "body": "Instead of the S-learner, one model that predicts the outcome and takes a difference, R-learner works in two stages. Stage 1 fits two models: m(x), how much this HCP prescribes, and e(x), how likely this HCP is to be visited. Stage 2 fits the effect on the residuals, through the R-loss: the outcome residual (Y - m(x)) against the treatment residual (t - e(x)). Those residuals are the quasi-random variation, visits the targeting rule did not predict, so the effect it learns is the visit’s own effect, not the HCP’s baseline.",
           "figures": [
             {
               "src": "assets/rlearner-s-vs-r.svg",
@@ -2116,7 +2147,7 @@ footer p{
         },
         {
           "heading": "From the effect to a priority list",
-          "body": "Each HCP gets one number: τ̂(x), the incremental NBRx a visit is expected to add. Rank HCPs by τ̂, highest first, and fill rep capacity in that order; the rest get no visit, or digital only. The top of this list looks different from the old one: not the biggest prescribers, but the persuadables. A visit is worth making when the expected incremental NBRx is worth more than the visit costs.",
+          "body": "Each HCP gets one number: τ̂(x), the incremental NBRx a visit is expected to add. Rank HCPs by τ̂, highest first, and fill rep capacity in that order; the rest get no visit, or digital only. The top of this list looks different from the old one: not the biggest prescribers, but the HCPs whose decision a visit can change. A visit is worth making when the expected incremental NBRx is worth more than the visit costs.",
           "figures": [
             {
               "src": "assets/rlearner-prioritization.svg",
@@ -2132,7 +2163,7 @@ footer p{
       "sections": [
         {
           "heading": "Two levels of campaigns",
-          "body": "Campaigns live at two levels. Customer-level campaigns target individual HCPs, at the grain of HCP and week: what each HCP saw, each week. DMA-level campaigns broadcast to a whole market, at the grain of DMA and week: what each DMA saw, each week. One HCP lives in one DMA, so DMA exposure is shared by every HCP in that market. The outcome is the same at both grains: HCP-week NBRx.",
+          "body": "Campaigns run at two levels. Customer-level campaigns target individual HCPs, at the grain of HCP and week: what each HCP saw, each week. DMA-level campaigns broadcast to a whole market, at the grain of DMA and week: what each DMA saw, each week. Each HCP is in exactly one DMA, so DMA exposure is shared by every HCP in that market. The outcome is the same at both grains: HCP-week NBRx.",
           "figures": [
             {
               "src": "assets/mmm-fig1-two-levels.svg",
@@ -2143,7 +2174,7 @@ footer p{
         },
         {
           "heading": "The model: sequential, customer first, DMA second",
-          "body": "Stage 1 builds an HCP-week linear model from the customer-level campaign, with adstock, and HCP attributes. It predicts HCP-week NBRx, and what it cannot explain becomes the residual. Stage 2 fits that residual with the DMA-level campaign, with adstock, and DMA attributes, keeping only the terms that actually explain what is left over, stepwise. While both stages run, the adstock of both campaigns is searched: try decay and half-life values, refit, pick the best. The order matters: DMA campaigns are shared across HCPs in a market, so they belong in the second stage, after the HCP-level signal is accounted for.",
+          "body": "Stage 1 builds an HCP-week linear model from the customer-level campaign, with adstock, and HCP attributes. It predicts HCP-week NBRx, and what it cannot explain becomes the residual. Stage 2 fits that residual with the DMA-level campaign, with adstock, and DMA attributes, keeping only the terms that explain the residual, stepwise. While both stages run, the adstock of both campaigns is searched: try decay and half-life values, refit, pick the best. The order matters: DMA campaigns are shared across HCPs in a market, so they belong in the second stage, after the HCP-level signal is accounted for.",
           "figures": [
             {
               "src": "assets/mmm-fig2-sequential-model.svg",
@@ -2154,7 +2185,7 @@ footer p{
         },
         {
           "heading": "Measure what already ran: a reusable PSM / DiD framework",
-          "body": "For each past campaign, first match treated HCPs and DMAs to untreated look-alikes on observables: same baseline, same market, same history. Apples to apples. Then compare before against after, treated against matched control: the campaign's effect, net of trends. Per channel, estimate the lag effect, how long the effect lasts after the campaign ends, and build a reasonable adstock interval per channel. That interval feeds the adstock search in the sequential model. The framework is reusable: run the same steps on every past campaign and keep the lag estimates fresh.",
+          "body": "For each past campaign, first match treated HCPs and DMAs to untreated look-alikes on observables: same baseline, same market, same history. Then compare before against after, treated against matched control: the campaign's effect, net of trends. Per channel, estimate the lag effect, how long the effect lasts after the campaign ends, and build a reasonable adstock interval per channel. That interval feeds the adstock search in the sequential model. The framework is reusable: run the same steps on every past campaign and keep the lag estimates up to date.",
           "figures": [
             {
               "src": "assets/mmm-fig3-psm-did.svg",
