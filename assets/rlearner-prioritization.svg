@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 830" role="img" aria-label="From tau-hat to a field priority list">
+<title>From τ̂ to a field priority list</title>
+  <defs>
+    <filter id="sk-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="3.5"/>
+    </filter>
+    <pattern id="sk-h-blue" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="9" height="9" fill="#dbeafe"/>
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#bcd6f7" stroke-width="1.4"/>
+    </pattern>
+    <pattern id="sk-h-green" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="9" height="9" fill="#d8f3e3"/>
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#b5e6c8" stroke-width="1.4"/>
+    </pattern>
+    <pattern id="sk-h-orange" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="9" height="9" fill="#fdeecb"/>
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#f3d68a" stroke-width="1.4"/>
+    </pattern>
+    <pattern id="sk-h-purple" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="9" height="9" fill="#e7defc"/>
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#c9b8f5" stroke-width="1.4"/>
+    </pattern>
+    <marker id="sk-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#111827"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1400" height="830" fill="#ffffff"/>
+  <g font-family="'Comic Sans MS','Chalkboard SE','Segoe Print','Bradley Hand',cursive">
+    <text x="30" y="44" text-anchor="start" font-size="26" fill="#111827" font-weight="600">From τ̂ to a field priority list</text>
+    <rect x="380" y="90" width="640" height="60" rx="14" fill="#f3f4f6" stroke="#111827" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <text x="700" y="116" text-anchor="middle" font-size="18" fill="#111827" font-weight="600">HCP list with features x</text>
+    <text x="700" y="138" text-anchor="middle" font-size="13" fill="#4b5563">the full call list</text>
+    <line x1="700" y1="150" x2="700" y2="166" stroke="#111827" stroke-width="2" marker-end="url(#sk-arr)"/>
+    <rect x="380" y="166" width="640" height="64" rx="14" fill="url(#sk-h-blue)" stroke="#1d4ed8" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <text x="700" y="192" text-anchor="middle" font-size="18" fill="#111827" font-weight="600">R-learner τ̂(x)</text>
+    <text x="700" y="214" text-anchor="middle" font-size="13" fill="#4b5563">incremental NBRx per field touch</text>
+    <line x1="700" y1="230" x2="700" y2="246" stroke="#111827" stroke-width="2" marker-end="url(#sk-arr)"/>
+    <rect x="380" y="246" width="640" height="60" rx="14" fill="url(#sk-h-green)" stroke="#15803d" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <text x="700" y="282" text-anchor="middle" font-size="18" fill="#111827" font-weight="600">Rank HCPs by τ̂, highest first</text>
+    <line x1="700" y1="306" x2="700" y2="322" stroke="#111827" stroke-width="2" marker-end="url(#sk-arr)"/>
+    <rect x="380" y="322" width="640" height="64" rx="14" fill="url(#sk-h-purple)" stroke="#6d28d9" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <text x="700" y="348" text-anchor="middle" font-size="18" fill="#111827" font-weight="600">Visit the top-k%</text>
+    <text x="700" y="370" text-anchor="middle" font-size="13" fill="#4b5563">fill rep capacity in τ̂ order</text>
+    <line x1="700" y1="386" x2="700" y2="402" stroke="#111827" stroke-width="2" marker-end="url(#sk-arr)"/>
+    <rect x="380" y="402" width="640" height="60" rx="14" fill="#f3f4f6" stroke="#111827" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <text x="700" y="438" text-anchor="middle" font-size="17" fill="#111827" font-weight="600">The rest: no visit (or digital only)</text>
+    <rect x="30" y="510" width="640" height="130" rx="14" fill="url(#sk-h-orange)" stroke="#c2410c" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <text x="350" y="540" text-anchor="middle" font-size="17" fill="#111827" font-weight="600">Rank by baseline instead</text>
+    <text x="350" y="570" text-anchor="middle" font-size="15" fill="#111827">top of the list = sure things</text>
+    <text x="350" y="596" text-anchor="middle" font-size="14" fill="#4b5563">(would prescribe anyway)</text>
+    <rect x="730" y="510" width="640" height="130" rx="14" fill="url(#sk-h-green)" stroke="#15803d" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <text x="1050" y="540" text-anchor="middle" font-size="17" fill="#111827" font-weight="600">Rank by τ̂</text>
+    <text x="1050" y="570" text-anchor="middle" font-size="15" fill="#111827">top of the list = persuadables</text>
+    <text x="1050" y="596" text-anchor="middle" font-size="14" fill="#4b5563">(prescribe only if visited)</text>
+    <rect x="30" y="680" width="1340" height="64" rx="14" fill="url(#sk-h-purple)" stroke="#6d28d9" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <text x="700" y="718" text-anchor="middle" font-size="18" fill="#111827" font-weight="600">Visit if τ̂(x) · value of an NBRx &gt; cost of a visit.</text>
+    <rect x="258.5625" y="782" width="18" height="16" rx="4" fill="#f3f4f6" stroke="#111827" stroke-width="1.6"/>
+    <text x="284.5625" y="795" text-anchor="start" font-size="13.5" fill="#4b5563">inputs</text>
+    <rect x="363.1125" y="782" width="18" height="16" rx="4" fill="url(#sk-h-blue)" stroke="#1d4ed8" stroke-width="1.6"/>
+    <text x="389.1125" y="795" text-anchor="start" font-size="13.5" fill="#4b5563">model / prediction</text>
+    <rect x="556.7625" y="782" width="18" height="16" rx="4" fill="url(#sk-h-green)" stroke="#15803d" stroke-width="1.6"/>
+    <text x="582.7625" y="795" text-anchor="start" font-size="13.5" fill="#4b5563">incremental effect</text>
+    <rect x="750.4125" y="782" width="18" height="16" rx="4" fill="url(#sk-h-purple)" stroke="#6d28d9" stroke-width="1.6"/>
+    <text x="776.4125" y="795" text-anchor="start" font-size="13.5" fill="#4b5563">NBA rule</text>
+    <rect x="869.8125" y="782" width="18" height="16" rx="4" fill="url(#sk-h-orange)" stroke="#c2410c" stroke-width="1.6"/>
+    <text x="895.8125" y="795" text-anchor="start" font-size="13.5" fill="#4b5563">limitation</text>
+    <circle cx="1013.0625" cy="790" r="9" fill="#111827"/>
+    <text x="1013.0625" y="794" text-anchor="middle" font-size="12" font-weight="600" fill="#ffffff">t</text>
+    <text x="1030.0625" y="795" text-anchor="start" font-size="13.5" fill="#4b5563">receives action</text>
+  </g>
+</svg>

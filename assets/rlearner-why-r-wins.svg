@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 860" role="img" aria-label="Why R-learner wins when targeting is selective">
+<title>Why R-learner wins when targeting is selective</title>
+  <defs>
+    <filter id="sk-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="3.5"/>
+    </filter>
+    <pattern id="sk-h-blue" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="9" height="9" fill="#dbeafe"/>
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#bcd6f7" stroke-width="1.4"/>
+    </pattern>
+    <pattern id="sk-h-green" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="9" height="9" fill="#d8f3e3"/>
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#b5e6c8" stroke-width="1.4"/>
+    </pattern>
+    <pattern id="sk-h-orange" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="9" height="9" fill="#fdeecb"/>
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#f3d68a" stroke-width="1.4"/>
+    </pattern>
+    <pattern id="sk-h-purple" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="9" height="9" fill="#e7defc"/>
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#c9b8f5" stroke-width="1.4"/>
+    </pattern>
+    <marker id="sk-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#111827"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1400" height="860" fill="#ffffff"/>
+  <g font-family="'Comic Sans MS','Chalkboard SE','Segoe Print','Bradley Hand',cursive">
+    <text x="30" y="44" text-anchor="start" font-size="26" fill="#111827" font-weight="600">Why R-learner wins when targeting is selective</text>
+    <text x="700" y="84" text-anchor="middle" font-size="20" fill="#1d4ed8" font-weight="600">Sales is selective</text>
+    <rect x="640" y="150" width="120" height="230" fill="url(#sk-h-purple)" stroke="#6d28d9" stroke-width="1.6" stroke-dasharray="6 5" opacity="0.55"/>
+    <path d="M90,380 L90,373.9 L102,372.5 L114,370.8 L126,368.9 L138,366.6 L150,364.0 L162,361.0 L174,357.5 L186,353.6 L198,349.3 L210,344.4 L222,339.0 L234,333.1 L246,326.7 L258,319.8 L270,312.4 L282,304.7 L294,296.6 L306,288.1 L318,279.5 L330,270.8 L342,262.1 L354,253.5 L366,245.2 L378,237.2 L390,229.7 L402,222.8 L414,216.6 L426,211.3 L438,206.9 L450,203.6 L462,201.3 L474,200.1 L486,200.1 L498,201.3 L510,203.6 L522,206.9 L534,211.3 L546,216.6 L558,222.8 L570,229.7 L582,237.2 L594,245.2 L606,253.5 L618,262.1 L630,270.8 L642,279.5 L654,288.1 L666,296.6 L678,304.7 L690,312.4 L702,319.8 L714,326.7 L726,333.1 L738,339.0 L750,344.4 L762,349.3 L774,353.6 L786,357.5 L798,361.0 L810,364.0 L822,366.6 L834,368.9 L846,370.8 L858,372.5 L870,373.9 L882,375.0 L894,376.0 L906,376.8 L918,377.5 L930,378.0 L930,380 Z" fill="url(#sk-h-blue)" stroke="#1d4ed8" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <path d="M470,380 L470,377.6 L482,376.9 L494,376.1 L506,375.1 L518,373.9 L530,372.5 L542,370.8 L554,368.8 L566,366.4 L578,363.6 L590,360.4 L602,356.7 L614,352.5 L626,347.8 L638,342.4 L650,336.5 L662,329.9 L674,322.7 L686,314.8 L698,306.4 L710,297.4 L722,287.9 L734,278.0 L746,267.7 L758,257.2 L770,246.6 L782,235.9 L794,225.4 L806,215.2 L818,205.4 L830,196.2 L842,187.8 L854,180.3 L866,173.8 L878,168.5 L890,164.4 L902,161.6 L914,160.2 L926,160.2 L938,161.6 L950,164.4 L962,168.5 L974,173.8 L986,180.3 L998,187.8 L1010,196.2 L1022,205.4 L1034,215.2 L1046,225.4 L1058,235.9 L1070,246.6 L1082,257.2 L1094,267.7 L1106,278.0 L1118,287.9 L1130,297.4 L1142,306.4 L1154,314.8 L1166,322.7 L1178,329.9 L1190,336.5 L1202,342.4 L1214,347.8 L1226,352.5 L1238,356.7 L1250,360.4 L1262,363.6 L1274,366.4 L1286,368.8 L1298,370.8 L1310,372.5 L1310,380 Z" fill="url(#sk-h-green)" stroke="#15803d" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <text x="700" y="178" text-anchor="middle" font-size="13" fill="#6d28d9" font-weight="600">thin overlap</text>
+    <text x="480" y="188" text-anchor="middle" font-size="16" fill="#111827" font-weight="600">not visited</text>
+    <text x="920" y="148" text-anchor="middle" font-size="16" fill="#111827" font-weight="600">visited HCPs</text>
+    <line x1="90" y1="380" x2="1310" y2="380" stroke="#111827" stroke-width="2" marker-end="url(#sk-arr)"/>
+    <text x="110" y="406" text-anchor="start" font-size="13" fill="#4b5563">low</text>
+    <text x="1290" y="406" text-anchor="start" font-size="13" fill="#4b5563">high</text>
+    <text x="700" y="432" text-anchor="middle" font-size="14" fill="#4b5563">baseline prescribing propensity</text>
+    <text x="700" y="486" text-anchor="middle" font-size="20" fill="#1d4ed8" font-weight="600">Residualization isolates the surprise</text>
+    <rect x="90" y="516" width="560" height="116" rx="14" fill="url(#sk-h-blue)" stroke="#1d4ed8" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <text x="370" y="546" text-anchor="middle" font-size="17" fill="#111827" font-weight="600">High-propensity HCP, NOT visited</text>
+    <text x="370" y="572" text-anchor="middle" font-size="14" fill="#111827">t - e(x) is a large negative residual</text>
+    <text x="370" y="598" text-anchor="middle" font-size="14" fill="#4b5563">e(x) ~ 0.9, t = 0, so residual ~ -0.9</text>
+    <rect x="750" y="516" width="560" height="116" rx="14" fill="url(#sk-h-green)" stroke="#15803d" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <text x="1030" y="546" text-anchor="middle" font-size="17" fill="#111827" font-weight="600">Low-propensity HCP, WAS visited</text>
+    <text x="1030" y="572" text-anchor="middle" font-size="14" fill="#111827">t - e(x) is a large positive residual</text>
+    <text x="1030" y="598" text-anchor="middle" font-size="14" fill="#4b5563">e(x) ~ 0.1, t = 1, so residual ~ +0.9</text>
+    <text x="700" y="668" text-anchor="middle" font-size="15" fill="#111827">These “surprises” are the quasi-random variation — visits the targeting rule did not predict.</text>
+    <rect x="90" y="700" width="1220" height="120" rx="14" fill="url(#sk-h-green)" stroke="#15803d" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <text x="700" y="732" text-anchor="middle" font-size="17" fill="#111827" font-weight="600">R-learner learns τ̂ from the surprises only —</text>
+    <text x="700" y="758" text-anchor="middle" font-size="17" fill="#111827" font-weight="600">the selection that biases S-learner is partialled out before τ is fit.</text>
+    <text x="700" y="794" text-anchor="middle" font-size="18" fill="#111827">Y - m(x) = (t - e(x)) · τ̂(x) + noise</text>
+  </g>
+</svg>
