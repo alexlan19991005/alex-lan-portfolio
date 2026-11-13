@@ -130,14 +130,7 @@
       "title": "[Placeholder] The anatomy of search ranking",
       "body": [
         "This is placeholder body text for the search ranking report. Replace this with your actual write-up about query understanding, retrieval, and learning-to-rank.",
-        "More placeholder paragraphs go here. The layout mirrors an Anthropic research report: a centered headline, a large figure, and a right-hand metadata rail with published date, team, and topics."
-      ],
-      "publishedValue": "Placeholder date",
-      "teamValue": "Placeholder team",
-      "topics": [
-        "Placeholder topic A",
-        "Placeholder topic B",
-        "Placeholder topic C"
+        "More placeholder paragraphs go here. The layout mirrors an Anthropic research report: a centered headline and a large figure."
       ]
     },
     "ads": {
@@ -182,14 +175,7 @@
         }
       ],
       "mediumText": "Read the full article on Medium →",
-      "mediumUrl": "https://medium.com/@kl3411/recommendation-algorithms-in-pharma-commercialization-integrating-the-mmoe-framework-into-822f163d9cd9",
-      "publishedValue": "October 2026",
-      "teamValue": "Bristol Myers Squibb",
-      "topics": [
-        "MMoE",
-        "Uplift modeling",
-        "Next-Best-Action"
-      ]
+      "mediumUrl": "https://medium.com/@kl3411/recommendation-algorithms-in-pharma-commercialization-integrating-the-mmoe-framework-into-822f163d9cd9"
     },
     "recsys": {
       "title": "Field Engagement, Ranked by Effect: R-Learner Uplift for Rep Prioritization",
@@ -227,13 +213,6 @@
             }
           ]
         }
-      ],
-      "publishedValue": "November 2026",
-      "teamValue": "Bristol Myers Squibb",
-      "topics": [
-        "R-learner",
-        "Uplift modeling",
-        "Field prioritization"
       ]
     },
     "mlops": {
@@ -272,13 +251,6 @@
             }
           ]
         }
-      ],
-      "publishedValue": "November 2026",
-      "teamValue": "Bristol Myers Squibb",
-      "topics": [
-        "Marketing mix modeling",
-        "Adstock",
-        "PSM, DiD"
       ]
     }
   },
@@ -374,10 +346,6 @@
     "resume": "Résumé",
     "reportKicker": "Research report",
     "overview": "Overview",
-    "published": "Published",
-    "team": "Team",
-    "topics": "Topics",
-    "seeMore": "See more...",
     "swipeHint": "← swipe →",
     "area": "Area",
     "sequenceAriaLabel": "Learn more — in order"

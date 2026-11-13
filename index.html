@@ -1239,7 +1239,7 @@ footer p{
 
 .report-body{
   display:grid;
-  grid-template-columns:1fr 260px;
+  grid-template-columns:1fr;
   gap:48px;
   align-items:start;
   max-width:900px;
@@ -1546,11 +1546,6 @@ footer p{
         <h3 data-cfg="shared.overview"></h3>
         <p data-cfg="reports.search.body.0"></p><p data-cfg="reports.search.body.1"></p>
       </div>
-      <div class="report-side">
-        <div class="side-item"><div class="side-label" data-cfg="shared.published"></div><div class="side-value" data-cfg="reports.search.publishedValue"></div></div>
-        <div class="side-item"><div class="side-label" data-cfg="shared.team"></div><div class="side-value" data-cfg="reports.search.teamValue"></div></div>
-        <div class="side-item"><div class="side-label" data-cfg="shared.topics"></div><span class="side-topic" data-cfg="reports.search.topics.0"></span><span class="side-topic" data-cfg="reports.search.topics.1"></span><span class="side-topic" data-cfg="reports.search.topics.2"></span><span class="side-more" data-cfg="shared.seeMore"></span></div>
-      </div>
     </div>
   </article>
 </div>
@@ -1648,11 +1643,6 @@ footer p{
         </section>
         <p class="report-medium-link"><a href="https://medium.com/@kl3411/recommendation-algorithms-in-pharma-commercialization-integrating-the-mmoe-framework-into-822f163d9cd9" target="_blank" rel="noopener" data-cfg="reports.ads.mediumText" data-cfg-href="reports.ads.mediumUrl"></a></p>
       </div>
-      <div class="report-side">
-        <div class="side-item"><div class="side-label" data-cfg="shared.published"></div><div class="side-value" data-cfg="reports.ads.publishedValue"></div></div>
-        <div class="side-item"><div class="side-label" data-cfg="shared.team"></div><div class="side-value" data-cfg="reports.ads.teamValue"></div></div>
-        <div class="side-item"><div class="side-label" data-cfg="shared.topics"></div><span class="side-topic" data-cfg="reports.ads.topics.0"></span><span class="side-topic" data-cfg="reports.ads.topics.1"></span><span class="side-topic" data-cfg="reports.ads.topics.2"></span><span class="side-more" data-cfg="shared.seeMore"></span></div>
-      </div>
     </div>
   </article>
 </div>
@@ -1692,11 +1682,6 @@ footer p{
           </figure>
         </section>
       </div>
-      <div class="report-side">
-        <div class="side-item"><div class="side-label" data-cfg="shared.published"></div><div class="side-value" data-cfg="reports.recsys.publishedValue"></div></div>
-        <div class="side-item"><div class="side-label" data-cfg="shared.team"></div><div class="side-value" data-cfg="reports.recsys.teamValue"></div></div>
-        <div class="side-item"><div class="side-label" data-cfg="shared.topics"></div><span class="side-topic" data-cfg="reports.recsys.topics.0"></span><span class="side-topic" data-cfg="reports.recsys.topics.1"></span><span class="side-topic" data-cfg="reports.recsys.topics.2"></span><span class="side-more" data-cfg="shared.seeMore"></span></div>
-      </div>
     </div>
   </article>
 </div>
@@ -1735,11 +1720,6 @@ footer p{
             <figcaption data-cfg="reports.mlops.sections.2.figures.0.caption"></figcaption>
           </figure>
         </section>
-      </div>
-      <div class="report-side">
-        <div class="side-item"><div class="side-label" data-cfg="shared.published"></div><div class="side-value" data-cfg="reports.mlops.publishedValue"></div></div>
-        <div class="side-item"><div class="side-label" data-cfg="shared.team"></div><div class="side-value" data-cfg="reports.mlops.teamValue"></div></div>
-        <div class="side-item"><div class="side-label" data-cfg="shared.topics"></div><span class="side-topic" data-cfg="reports.mlops.topics.0"></span><span class="side-topic" data-cfg="reports.mlops.topics.1"></span><span class="side-topic" data-cfg="reports.mlops.topics.2"></span><span class="side-more" data-cfg="shared.seeMore"></span></div>
       </div>
     </div>
   </article>
@@ -2062,14 +2042,7 @@ footer p{
       "title": "[Placeholder] The anatomy of search ranking",
       "body": [
         "This is placeholder body text for the search ranking report. Replace this with your actual write-up about query understanding, retrieval, and learning-to-rank.",
-        "More placeholder paragraphs go here. The layout mirrors an Anthropic research report: a centered headline, a large figure, and a right-hand metadata rail with published date, team, and topics."
-      ],
-      "publishedValue": "Placeholder date",
-      "teamValue": "Placeholder team",
-      "topics": [
-        "Placeholder topic A",
-        "Placeholder topic B",
-        "Placeholder topic C"
+        "More placeholder paragraphs go here. The layout mirrors an Anthropic research report: a centered headline and a large figure."
       ]
     },
     "ads": {
@@ -2114,14 +2087,7 @@ footer p{
         }
       ],
       "mediumText": "Read the full article on Medium →",
-      "mediumUrl": "https://medium.com/@kl3411/recommendation-algorithms-in-pharma-commercialization-integrating-the-mmoe-framework-into-822f163d9cd9",
-      "publishedValue": "October 2026",
-      "teamValue": "Bristol Myers Squibb",
-      "topics": [
-        "MMoE",
-        "Uplift modeling",
-        "Next-Best-Action"
-      ]
+      "mediumUrl": "https://medium.com/@kl3411/recommendation-algorithms-in-pharma-commercialization-integrating-the-mmoe-framework-into-822f163d9cd9"
     },
     "recsys": {
       "title": "Field Engagement, Ranked by Effect: R-Learner Uplift for Rep Prioritization",
@@ -2159,13 +2125,6 @@ footer p{
             }
           ]
         }
-      ],
-      "publishedValue": "November 2026",
-      "teamValue": "Bristol Myers Squibb",
-      "topics": [
-        "R-learner",
-        "Uplift modeling",
-        "Field prioritization"
       ]
     },
     "mlops": {
@@ -2204,13 +2163,6 @@ footer p{
             }
           ]
         }
-      ],
-      "publishedValue": "November 2026",
-      "teamValue": "Bristol Myers Squibb",
-      "topics": [
-        "Marketing mix modeling",
-        "Adstock",
-        "PSM, DiD"
       ]
     }
   },
@@ -2306,10 +2258,6 @@ footer p{
     "resume": "Résumé",
     "reportKicker": "Research report",
     "overview": "Overview",
-    "published": "Published",
-    "team": "Team",
-    "topics": "Topics",
-    "seeMore": "See more...",
     "swipeHint": "← swipe →",
     "area": "Area",
     "sequenceAriaLabel": "Learn more — in order"
