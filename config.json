@@ -63,11 +63,11 @@
         "placeholderNote": "Recall, ranking, and multi-objective trade-offs."
       },
       {
-        "chip": "Search",
-        "date": "2018 — 2020",
-        "role": "Algorithm Engineer",
-        "company": "Search & Discovery Startup",
-        "description": "Developed search relevance models from query understanding to LTR, and built the first recall pipeline.",
+        "chip": "Ranking and User Growth Modeling",
+        "date": "Pre 2023",
+        "role": "Various Data Science Internships",
+        "company": "WeightWatchers | Kuaishou Technology",
+        "description": "Support the team in developing user growth models ｜ Evaluate the accuracy of CTR-based advertising pricing models and P95 compensation estimates | Assess the effectiveness of multi-channel retrieval",
         "ariaLabel": "View details — Algorithm Engineer, Search",
         "kicker": "Experience · Search",
         "area": "Search relevance",
