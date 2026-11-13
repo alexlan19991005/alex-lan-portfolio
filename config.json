@@ -52,12 +52,12 @@
         "placeholderNote": "Team, scope, model design, and results."
       },
       {
-        "chip": "RecSys",
-        "date": "2020 — 2023",
-        "role": "Machine Learning Engineer",
-        "company": "E-commerce Platform",
-        "description": "Built the home-feed recommendation system with multi-objective ranking across CTR, CVR, and GMV.",
-        "ariaLabel": "View details — Machine Learning Engineer, RecSys",
+        "chip": "Ad Measurement",
+        "date": "2023",
+        "role": "Data Scientist",
+        "company": "Novo Nordisk",
+        "description": "Developed in-house customer- and DMA-level measurement frameworks and marketing mix modeling prototype.",
+        "ariaLabel": "View details — Data Scientist",
         "kicker": "Experience · RecSys",
         "area": "Recommendation",
         "placeholderNote": "Recall, ranking, and multi-objective trade-offs."
