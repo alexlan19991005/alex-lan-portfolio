@@ -192,17 +192,48 @@
       ]
     },
     "recsys": {
-      "title": "[Placeholder] Patterns in recommendation",
-      "body": [
-        "This is placeholder body text for the recommendation report. Replace this with your actual write-up about user modeling, graph-based recall, and multi-objective ranking.",
-        "More placeholder paragraphs go here. The layout mirrors an Anthropic research report."
+      "title": "Field Engagement, Ranked by Effect: R-Learner Uplift for Rep Prioritization",
+      "sections": [
+        {
+          "heading": "The problem: visits go to the wrong HCPs",
+          "body": "Most field plans rank HCPs by how likely they are to prescribe and send reps to the top of the list. The problem: the top of that list is full of people who would prescribe anyway, ‘sure things’ who convert with or without a visit. Rep time flows to them instead of the ‘persuadables’, the ones whose decision a visit can actually change. Ranking by prescribing probability cannot tell the two apart, so much of the field budget buys nothing incremental.",
+          "figures": [
+            {
+              "src": "assets/rlearner-why-r-wins.svg",
+              "alt": "Why R-learner wins when targeting is selective: visited HCPs cluster at high baseline propensity and not-visited HCPs at low, with only a thin overlap; residualization isolates the surprise visits",
+              "caption": "Why R-learner wins when targeting is selective"
+            }
+          ]
+        },
+        {
+          "heading": "The model: R-learner estimates the effect directly",
+          "body": "Instead of the S-learner, one model that predicts the outcome and takes a difference, R-learner works in two stages. Stage 1 fits two models: m(x), how much this HCP prescribes, and e(x), how likely this HCP is to be visited. Stage 2 fits the effect on what is left over, through the R-loss: the outcome residual (Y - m(x)) against the treatment residual (t - e(x)). Those residuals are the quasi-random variation, visits the targeting rule did not predict, so the effect it learns is the visit’s own effect, not the HCP’s baseline.",
+          "figures": [
+            {
+              "src": "assets/rlearner-s-vs-r.svg",
+              "alt": "S-learner versus R-learner: one model that takes a difference, against a two-stage R-learner that fits the effect on residualized outcome and treatment",
+              "caption": "Field engagement · S-learner vs R-learner"
+            }
+          ]
+        },
+        {
+          "heading": "From the effect to a priority list",
+          "body": "Each HCP gets one number: τ̂(x), the incremental NBRx a visit is expected to add. Rank HCPs by τ̂, highest first, and fill rep capacity in that order; the rest get no visit, or digital only. The top of this list looks different from the old one: not the biggest prescribers, but the persuadables. A visit is worth making when the expected incremental NBRx is worth more than the visit costs.",
+          "figures": [
+            {
+              "src": "assets/rlearner-prioritization.svg",
+              "alt": "From tau-hat to a field priority list: HCPs ranked by incremental NBRx, rep capacity filled in that order, the rest no visit or digital only",
+              "caption": "From τ̂ to a field priority list"
+            }
+          ]
+        }
       ],
-      "publishedValue": "Placeholder date",
-      "teamValue": "Placeholder team",
+      "publishedValue": "November 2026",
+      "teamValue": "Bristol Myers Squibb",
       "topics": [
-        "Placeholder topic A",
-        "Placeholder topic B",
-        "Placeholder topic C"
+        "R-learner",
+        "Uplift modeling",
+        "Field prioritization"
       ]
     },
     "mlops": {
