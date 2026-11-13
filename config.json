@@ -237,17 +237,48 @@
       ]
     },
     "mlops": {
-      "title": "[Placeholder] Shipping models safely",
-      "body": [
-        "This is placeholder body text for the MLOps report. Replace this with your actual write-up about feature stores, online serving, and A/B testing.",
-        "More placeholder paragraphs go here. The layout mirrors an Anthropic research report."
+      "title": "Marketing Mix at Two Levels: A Sequential Model, Checked by PSM / DiD",
+      "sections": [
+        {
+          "heading": "Two levels of campaigns",
+          "body": "Campaigns live at two levels. Customer-level campaigns target individual HCPs, at the grain of HCP and week: what each HCP saw, each week. DMA-level campaigns broadcast to a whole market, at the grain of DMA and week: what each DMA saw, each week. One HCP lives in one DMA, so DMA exposure is shared by every HCP in that market. The outcome is the same at both grains: HCP-week NBRx.",
+          "figures": [
+            {
+              "src": "assets/mmm-fig1-two-levels.svg",
+              "alt": "Campaigns live at two levels: customer-level campaigns target individual HCPs at HCP-week grain, DMA-level campaigns broadcast to a whole market at DMA-week grain; DMA exposure is shared by every HCP in that market",
+              "caption": "Campaigns live at two levels"
+            }
+          ]
+        },
+        {
+          "heading": "The model: sequential, customer first, DMA second",
+          "body": "Stage 1 builds an HCP-week linear model from the customer-level campaign, with adstock, and HCP attributes. It predicts HCP-week NBRx, and what it cannot explain becomes the residual. Stage 2 fits that residual with the DMA-level campaign, with adstock, and DMA attributes, keeping only the terms that actually explain what is left over, stepwise. While both stages run, the adstock of both campaigns is searched: try decay and half-life values, refit, pick the best. The order matters: DMA campaigns are shared across HCPs in a market, so they belong in the second stage, after the HCP-level signal is accounted for.",
+          "figures": [
+            {
+              "src": "assets/mmm-fig2-sequential-model.svg",
+              "alt": "Sequential two-stage model: stage 1 fits an HCP-week linear model from the customer-level campaign and HCP attributes, stage 2 fits the residual with the DMA-level campaign and DMA attributes with stepwise selection, while the adstock of both campaigns is searched",
+              "caption": "Sequential model - customer first, DMA second"
+            }
+          ]
+        },
+        {
+          "heading": "Measure what already ran: a reusable PSM / DiD framework",
+          "body": "For each past campaign, first match treated HCPs and DMAs to untreated look-alikes on observables: same baseline, same market, same history. Apples to apples. Then compare before against after, treated against matched control: the campaign's effect, net of trends. Per channel, estimate the lag effect, how long the effect lasts after the campaign ends, and build a reasonable adstock interval per channel. That interval feeds the adstock search in the sequential model. The framework is reusable: run the same steps on every past campaign and keep the lag estimates fresh.",
+          "figures": [
+            {
+              "src": "assets/mmm-fig3-psm-did.svg",
+              "alt": "Reusable PSM / DiD framework: match treated HCPs and DMAs to untreated look-alikes, compare before vs after against the matched control, estimate each channel's lag effect and build an adstock interval that feeds the adstock search",
+              "caption": "Measure what already ran - PSM / DiD"
+            }
+          ]
+        }
       ],
-      "publishedValue": "Placeholder date",
-      "teamValue": "Placeholder team",
+      "publishedValue": "November 2026",
+      "teamValue": "Bristol Myers Squibb",
       "topics": [
-        "Placeholder topic A",
-        "Placeholder topic B",
-        "Placeholder topic C"
+        "Marketing mix modeling",
+        "Adstock",
+        "PSM, DiD"
       ]
     }
   },
