@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 640" role="img" aria-label="Measure what already ran - PSM / DiD">
+<title>Measure what already ran - PSM / DiD</title>
+  <defs>
+    <filter id="sk-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="3.5"/>
+    </filter>
+    <pattern id="sk-h-blue" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="9" height="9" fill="#dbeafe"/>
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#bcd6f7" stroke-width="1.4"/>
+    </pattern>
+    <pattern id="sk-h-green" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="9" height="9" fill="#d8f3e3"/>
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#b5e6c8" stroke-width="1.4"/>
+    </pattern>
+    <pattern id="sk-h-orange" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="9" height="9" fill="#fdeecb"/>
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#f3d68a" stroke-width="1.4"/>
+    </pattern>
+    <pattern id="sk-h-purple" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="9" height="9" fill="#e7defc"/>
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#c9b8f5" stroke-width="1.4"/>
+    </pattern>
+    <marker id="sk-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#111827"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1400" height="640" fill="#ffffff"/>
+  <g font-family="'Comic Sans MS','Chalkboard SE','Segoe Print','Bradley Hand',cursive">
+    <text x="30" y="44" text-anchor="start" font-size="26" fill="#111827" font-weight="600">Measure what already ran - PSM / DiD</text>
+
+    <text x="30" y="86" text-anchor="start" font-size="20" fill="#1d4ed8" font-weight="600">For each past campaign:</text>
+    <rect x="30" y="108" width="1340" height="104" rx="14" fill="url(#sk-h-blue)" stroke="#1d4ed8" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <text x="700.0" y="139" text-anchor="middle" font-size="17" fill="#111827" font-weight="600">Step 1 - PSM: match</text>
+    <text x="700.0" y="161" text-anchor="middle" font-size="14" fill="#111827">match treated HCPs / DMAs to untreated look-alikes on observables</text>
+    <text x="700.0" y="183" text-anchor="middle" font-size="14" fill="#4b5563">same baseline, same market, same history - apples to apples</text>
+    <line x1="700" y1="212" x2="700" y2="228" stroke="#111827" stroke-width="2" marker-end="url(#sk-arr)"/>
+    <rect x="30" y="228" width="1340" height="104" rx="14" fill="url(#sk-h-blue)" stroke="#1d4ed8" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <text x="700.0" y="259" text-anchor="middle" font-size="17" fill="#111827" font-weight="600">Step 2 - DiD: compare</text>
+    <text x="700.0" y="281" text-anchor="middle" font-size="14" fill="#111827">before vs after, treated vs matched control</text>
+    <text x="700.0" y="303" text-anchor="middle" font-size="14" fill="#4b5563">the campaign's effect, net of trends</text>
+    <line x1="700" y1="332" x2="700" y2="348" stroke="#111827" stroke-width="2" marker-end="url(#sk-arr)"/>
+    <rect x="30" y="348" width="410" height="130" rx="14" fill="url(#sk-h-green)" stroke="#15803d" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <text x="235.0" y="381" text-anchor="middle" font-size="16" fill="#111827" font-weight="600">Per channel, estimate</text>
+    <text x="235.0" y="403" text-anchor="middle" font-size="16" fill="#111827" font-weight="600">the lag effect</text>
+    <text x="235.0" y="425" text-anchor="middle" font-size="13" fill="#4b5563">how long the effect lasts</text>
+    <text x="235.0" y="447" text-anchor="middle" font-size="13" fill="#4b5563">after the campaign ends</text>
+    <rect x="495" y="348" width="410" height="130" rx="14" fill="url(#sk-h-green)" stroke="#15803d" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <text x="700.0" y="381" text-anchor="middle" font-size="16" fill="#111827" font-weight="600">build a reasonable</text>
+    <text x="700.0" y="403" text-anchor="middle" font-size="16" fill="#111827" font-weight="600">adstock interval per channel</text>
+    <text x="700.0" y="425" text-anchor="middle" font-size="13" fill="#4b5563">a range, not a single guess</text>
+    <text x="700.0" y="447" text-anchor="middle" font-size="13" fill="#4b5563">one interval per channel</text>
+    <rect x="960" y="348" width="410" height="130" rx="14" fill="url(#sk-h-purple)" stroke="#6d28d9" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <text x="1165.0" y="381" text-anchor="middle" font-size="16" fill="#111827" font-weight="600">the interval feeds the</text>
+    <text x="1165.0" y="403" text-anchor="middle" font-size="16" fill="#111827" font-weight="600">adstock search (diagram 2)</text>
+    <text x="1165.0" y="425" text-anchor="middle" font-size="13" fill="#4b5563">narrow the search,</text>
+    <text x="1165.0" y="447" text-anchor="middle" font-size="13" fill="#4b5563">faster fit</text>
+    <line x1="444" y1="413" x2="485" y2="413" stroke="#111827" stroke-width="2" marker-end="url(#sk-arr)"/>
+    <line x1="909" y1="413" x2="950" y2="413" stroke="#111827" stroke-width="2" marker-end="url(#sk-arr)"/>
+    <rect x="30" y="508" width="1340" height="84" rx="14" fill="url(#sk-h-orange)" stroke="#c2410c" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <text x="700.0" y="540" text-anchor="middle" font-size="17" fill="#111827" font-weight="600">Reusable: run the same framework on every past campaign</text>
+    <text x="700.0" y="562" text-anchor="middle" font-size="14" fill="#111827">keep the lag estimates fresh</text>
+  </g>
+</svg>

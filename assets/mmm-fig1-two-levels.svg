@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 700" role="img" aria-label="Campaigns live at two levels">
+<title>Campaigns live at two levels</title>
+  <defs>
+    <filter id="sk-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="3.5"/>
+    </filter>
+    <pattern id="sk-h-blue" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="9" height="9" fill="#dbeafe"/>
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#bcd6f7" stroke-width="1.4"/>
+    </pattern>
+    <pattern id="sk-h-green" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="9" height="9" fill="#d8f3e3"/>
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#b5e6c8" stroke-width="1.4"/>
+    </pattern>
+    <pattern id="sk-h-orange" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="9" height="9" fill="#fdeecb"/>
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#f3d68a" stroke-width="1.4"/>
+    </pattern>
+    <pattern id="sk-h-purple" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="9" height="9" fill="#e7defc"/>
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#c9b8f5" stroke-width="1.4"/>
+    </pattern>
+    <marker id="sk-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#111827"/>
+    </marker>
+    <marker id="sk-arr-big" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="14" markerHeight="14" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#111827"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1400" height="700" fill="#ffffff"/>
+  <g font-family="'Comic Sans MS','Chalkboard SE','Segoe Print','Bradley Hand',cursive">
+    <text x="30" y="44" text-anchor="start" font-size="26" fill="#111827" font-weight="600">Campaigns live at two levels</text>
+
+    <!-- left blob: customer level -->
+    <rect x="30" y="100" width="500" height="400" rx="24" fill="url(#sk-h-blue)" stroke="#1d4ed8" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <text x="280" y="142" text-anchor="middle" font-size="22" fill="#1d4ed8" font-weight="600">Customer level</text>
+    <circle cx="120" cy="182" r="13" fill="#ffffff" stroke="#111827" stroke-width="2" filter="url(#sk-rough)"/>
+    <circle cx="180" cy="182" r="13" fill="#ffffff" stroke="#111827" stroke-width="2" filter="url(#sk-rough)"/>
+    <circle cx="240" cy="182" r="13" fill="#ffffff" stroke="#111827" stroke-width="2" filter="url(#sk-rough)"/>
+    <circle cx="300" cy="182" r="13" fill="#ffffff" stroke="#111827" stroke-width="2" filter="url(#sk-rough)"/>
+    <circle cx="360" cy="182" r="13" fill="#ffffff" stroke="#111827" stroke-width="2" filter="url(#sk-rough)"/>
+    <circle cx="420" cy="182" r="13" fill="#ffffff" stroke="#111827" stroke-width="2" filter="url(#sk-rough)"/>
+    <text x="280" y="216" text-anchor="middle" font-size="13" fill="#4b5563">one dot = one HCP</text>
+    <text x="280" y="262" text-anchor="middle" font-size="17" fill="#111827" font-weight="600">customer-level campaigns</text>
+    <text x="280" y="284" text-anchor="middle" font-size="13" fill="#4b5563">what each HCP saw</text>
+    <text x="280" y="326" text-anchor="middle" font-size="17" fill="#111827" font-weight="600">HCP attributes</text>
+    <text x="280" y="348" text-anchor="middle" font-size="13" fill="#4b5563">who each HCP is</text>
+    <text x="280" y="425" text-anchor="middle" font-size="18" fill="#111827" font-weight="600">grain: HCP × week</text>
+    <text x="280" y="447" text-anchor="middle" font-size="13" fill="#4b5563">one row per HCP, per week</text>
+
+    <!-- big arrow: roll up -->
+    <text x="700" y="248" text-anchor="middle" font-size="18" fill="#111827" font-weight="600">roll up: HCPs live in one DMA</text>
+    <text x="700" y="272" text-anchor="middle" font-size="13" fill="#4b5563">many HCPs, one DMA</text>
+    <line x1="548" y1="300" x2="852" y2="300" stroke="#111827" stroke-width="7" marker-end="url(#sk-arr-big)"/>
+
+    <!-- right blob: DMA level -->
+    <rect x="870" y="100" width="500" height="400" rx="24" fill="url(#sk-h-green)" stroke="#15803d" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <text x="1120" y="142" text-anchor="middle" font-size="22" fill="#15803d" font-weight="600">DMA level</text>
+    <circle cx="1120" cy="190" r="40" fill="#ffffff" stroke="#111827" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <text x="1120" y="196" text-anchor="middle" font-size="17" fill="#111827" font-weight="600">DMA</text>
+    <text x="1120" y="258" text-anchor="middle" font-size="15" fill="#111827">one DMA / market</text>
+    <text x="1120" y="304" text-anchor="middle" font-size="17" fill="#111827" font-weight="600">DMA-level campaigns</text>
+    <text x="1120" y="326" text-anchor="middle" font-size="13" fill="#4b5563">what the market saw</text>
+    <text x="1120" y="368" text-anchor="middle" font-size="17" fill="#111827" font-weight="600">DMA attributes</text>
+    <text x="1120" y="390" text-anchor="middle" font-size="13" fill="#4b5563">what the market looks like</text>
+    <text x="1120" y="425" text-anchor="middle" font-size="18" fill="#111827" font-weight="600">grain: DMA × week</text>
+    <text x="1120" y="447" text-anchor="middle" font-size="13" fill="#4b5563">one row per DMA, per week</text>
+
+    <!-- bottom note -->
+    <rect x="30" y="540" width="1340" height="90" rx="14" fill="url(#sk-h-green)" stroke="#15803d" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <text x="700" y="575" text-anchor="middle" font-size="17" fill="#111827" font-weight="600">Same outcome, two grains</text>
+    <text x="700" y="599" text-anchor="middle" font-size="14" fill="#111827">HCP-week NBRx is the target. DMA exposure is shared by every HCP in that market.</text>
+
+    <!-- legend -->
+    <rect x="258.5625" y="652" width="18" height="16" rx="4" fill="#f3f4f6" stroke="#111827" stroke-width="1.6"/>
+    <text x="284.5625" y="665" text-anchor="start" font-size="13.5" fill="#4b5563">inputs</text>
+    <rect x="363.1125" y="652" width="18" height="16" rx="4" fill="url(#sk-h-blue)" stroke="#1d4ed8" stroke-width="1.6"/>
+    <text x="389.1125" y="665" text-anchor="start" font-size="13.5" fill="#4b5563">model / prediction</text>
+    <rect x="556.7625" y="652" width="18" height="16" rx="4" fill="url(#sk-h-green)" stroke="#15803d" stroke-width="1.6"/>
+    <text x="582.7625" y="665" text-anchor="start" font-size="13.5" fill="#4b5563">incremental effect</text>
+    <rect x="750.4125" y="652" width="18" height="16" rx="4" fill="url(#sk-h-purple)" stroke="#6d28d9" stroke-width="1.6"/>
+    <text x="776.4125" y="665" text-anchor="start" font-size="13.5" fill="#4b5563">NBA rule</text>
+    <rect x="869.8125" y="652" width="18" height="16" rx="4" fill="url(#sk-h-orange)" stroke="#c2410c" stroke-width="1.6"/>
+    <text x="895.8125" y="665" text-anchor="start" font-size="13.5" fill="#4b5563">limitation</text>
+    <circle cx="1013.0625" cy="660" r="9" fill="#111827"/>
+    <text x="1013.0625" y="664" text-anchor="middle" font-size="12" font-weight="600" fill="#ffffff">t</text>
+    <text x="1030.0625" y="665" text-anchor="start" font-size="13.5" fill="#4b5563">receives action</text>
+  </g>
+</svg>
