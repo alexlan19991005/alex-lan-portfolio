@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 890" role="img" aria-label="One forward pass">
+<title>One forward pass</title>
+  <defs>
+    <filter id="sk-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="3.5"/>
+    </filter>
+    <pattern id="sk-h-blue" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="9" height="9" fill="#dbeafe"/>
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#bcd6f7" stroke-width="1.4"/>
+    </pattern>
+    <pattern id="sk-h-green" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="9" height="9" fill="#d8f3e3"/>
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#b5e6c8" stroke-width="1.4"/>
+    </pattern>
+    <pattern id="sk-h-orange" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="9" height="9" fill="#fdeecb"/>
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#f3d68a" stroke-width="1.4"/>
+    </pattern>
+    <pattern id="sk-h-purple" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="9" height="9" fill="#e7defc"/>
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#c9b8f5" stroke-width="1.4"/>
+    </pattern>
+    <marker id="sk-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#111827"/>
+    </marker>
+    <marker id="sk-arr-big" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="14" markerHeight="14" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#111827"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1400" height="890" fill="#ffffff"/>
+  <g font-family="'Comic Sans MS','Chalkboard SE','Segoe Print','Bradley Hand',cursive">
+    <text x="30" y="44" text-anchor="start" font-size="26" fill="#111827" font-weight="600">One forward pass</text>
+    <text x="30" y="76" text-anchor="start" font-size="15" fill="#4b5563">one patient × one snapshot</text>
+
+    <!-- row A: inputs -->
+    <rect x="30" y="90" width="600" height="80" rx="14" fill="#f3f4f6" stroke="#111827" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <text x="330" y="122" text-anchor="middle" font-size="20" fill="#111827" font-weight="600">Claims timeline → token_id</text>
+    <text x="330" y="148" text-anchor="middle" font-size="14" fill="#4b5563">OMOP concepts · last 2,048 · right-pad</text>
+    <rect x="770" y="90" width="600" height="80" rx="14" fill="#f3f4f6" stroke="#111827" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <text x="1070" y="122" text-anchor="middle" font-size="20" fill="#111827" font-weight="600">day_delta</text>
+    <text x="1070" y="148" text-anchor="middle" font-size="14" fill="#4b5563">days before snapshot</text>
+    <line x1="330" y1="170" x2="330" y2="198" stroke="#111827" stroke-width="2.5" marker-end="url(#sk-arr)"/>
+    <line x1="1070" y1="170" x2="1070" y2="198" stroke="#111827" stroke-width="2.5" marker-end="url(#sk-arr)"/>
+
+    <!-- row B: embeddings -->
+    <rect x="30" y="200" width="600" height="80" rx="14" fill="url(#sk-h-green)" stroke="#15803d" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <text x="330" y="232" text-anchor="middle" font-size="20" fill="#111827" font-weight="600">Embedding table</text>
+    <text x="330" y="258" text-anchor="middle" font-size="14" fill="#4b5563">vocab × 768 · frozen (MedRep init)</text>
+    <rect x="770" y="200" width="600" height="80" rx="14" fill="url(#sk-h-purple)" stroke="#6d28d9" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <text x="1070" y="232" text-anchor="middle" font-size="20" fill="#111827" font-weight="600">Log-time embedding</text>
+    <text x="1070" y="258" text-anchor="middle" font-size="14" fill="#4b5563">11 buckets · 1d … 1,460d</text>
+    <line x1="330" y1="280" x2="330" y2="308" stroke="#111827" stroke-width="2.5" marker-end="url(#sk-arr)"/>
+
+    <!-- row C: adapter + merge -->
+    <rect x="30" y="310" width="560" height="80" rx="14" fill="url(#sk-h-purple)" stroke="#6d28d9" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <text x="310" y="342" text-anchor="middle" font-size="20" fill="#111827" font-weight="600">Linear adapter</text>
+    <text x="310" y="368" text-anchor="middle" font-size="14" fill="#4b5563">768 → d_model 512</text>
+    <line x1="590" y1="350" x2="668" y2="350" stroke="#111827" stroke-width="2.5" marker-end="url(#sk-arr)"/>
+    <circle cx="700" cy="350" r="26" fill="#ffffff" stroke="#111827" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <text x="700" y="359" text-anchor="middle" font-size="28" fill="#111827" font-weight="600">+</text>
+    <path d="M 1070 280 L 1070 350 L 732 350" fill="none" stroke="#111827" stroke-width="2.5" marker-end="url(#sk-arr)"/>
+    <line x1="700" y1="376" x2="700" y2="412" stroke="#111827" stroke-width="2.5" marker-end="url(#sk-arr)"/>
+
+    <!-- backbone -->
+    <rect x="30" y="415" width="1340" height="185" rx="18" fill="none" stroke="#6b7280" stroke-width="2.5" stroke-dasharray="8 6" filter="url(#sk-rough)"/>
+    <text x="60" y="452" text-anchor="start" font-size="20" fill="#111827" font-weight="600">Backbone: 12 pre-norm residual blocks</text>
+    <rect x="60" y="470" width="600" height="80" rx="14" fill="url(#sk-h-purple)" stroke="#6d28d9" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <text x="360" y="502" text-anchor="middle" font-size="20" fill="#111827" font-weight="600">BCNorm → mixer</text>
+    <text x="360" y="528" text-anchor="middle" font-size="14" fill="#4b5563">mamba2 | mamba3 | lstm</text>
+    <line x1="660" y1="510" x2="730" y2="510" stroke="#111827" stroke-width="2.5" marker-end="url(#sk-arr)"/>
+    <rect x="740" y="470" width="600" height="80" rx="14" fill="url(#sk-h-purple)" stroke="#6d28d9" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <text x="1040" y="502" text-anchor="middle" font-size="20" fill="#111827" font-weight="600">BCNorm → SwiGLU</text>
+    <text x="1040" y="528" text-anchor="middle" font-size="14" fill="#4b5563">residual add after each</text>
+    <text x="700" y="585" text-anchor="middle" font-size="13" fill="#4b5563">chunk state carry: mamba2 (conv, ssm) · mamba3 (angle, ssm, k, v) · lstm (h, c)</text>
+    <line x1="330" y1="600" x2="330" y2="638" stroke="#111827" stroke-width="2.5" marker-end="url(#sk-arr)"/>
+    <line x1="1070" y1="600" x2="1070" y2="638" stroke="#111827" stroke-width="2.5" marker-end="url(#sk-arr)"/>
+
+    <!-- row D: pool + NTP -->
+    <rect x="30" y="640" width="640" height="75" rx="14" fill="#f3f4f6" stroke="#111827" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <text x="350" y="672" text-anchor="middle" font-size="19" fill="#111827" font-weight="600">Pool last real position</text>
+    <text x="350" y="696" text-anchor="middle" font-size="14" fill="#4b5563">plus age / 100 · fp32</text>
+    <rect x="920" y="640" width="300" height="75" rx="14" fill="#f3f4f6" stroke="#6b7280" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <text x="1070" y="672" text-anchor="middle" font-size="19" fill="#111827" font-weight="600">NTP head</text>
+    <text x="1070" y="696" text-anchor="middle" font-size="14" fill="#4b5563">pretrain only</text>
+
+    <!-- fan-out to heads -->
+    <line x1="350" y1="715" x2="350" y2="745" stroke="#111827" stroke-width="2.5"/>
+    <line x1="240" y1="745" x2="1160" y2="745" stroke="#111827" stroke-width="2.5"/>
+    <line x1="240" y1="745" x2="240" y2="772" stroke="#111827" stroke-width="2.5" marker-end="url(#sk-arr)"/>
+    <line x1="700" y1="745" x2="700" y2="772" stroke="#111827" stroke-width="2.5" marker-end="url(#sk-arr)"/>
+    <line x1="1160" y1="745" x2="1160" y2="772" stroke="#111827" stroke-width="2.5" marker-end="url(#sk-arr)"/>
+
+    <!-- row E: heads -->
+    <rect x="30" y="775" width="420" height="75" rx="14" fill="url(#sk-h-purple)" stroke="#6d28d9" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <text x="240" y="807" text-anchor="middle" font-size="19" fill="#111827" font-weight="600">BinaryHead</text>
+    <text x="240" y="831" text-anchor="middle" font-size="13" fill="#4b5563">Linear → 1 logit · will it happen?</text>
+    <rect x="490" y="775" width="420" height="75" rx="14" fill="url(#sk-h-purple)" stroke="#6d28d9" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <text x="700" y="807" text-anchor="middle" font-size="19" fill="#111827" font-weight="600">DiscreteHazardHead</text>
+    <text x="700" y="831" text-anchor="middle" font-size="13" fill="#4b5563">Linear → H bin logits · when?</text>
+    <rect x="950" y="775" width="420" height="75" rx="14" fill="url(#sk-h-purple)" stroke="#6d28d9" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <text x="1160" y="807" text-anchor="middle" font-size="19" fill="#111827" font-weight="600">HCPCountHead</text>
+    <text x="1160" y="831" text-anchor="middle" font-size="13" fill="#4b5563">Σ patient p → Poisson λ · how many?</text>
+
+    <!-- legend -->
+    <text x="700" y="878" text-anchor="middle" font-size="13" fill="#4b5563">green = frozen · purple = trained · gray = input / parameter-free</text>
+  </g>
+</svg>

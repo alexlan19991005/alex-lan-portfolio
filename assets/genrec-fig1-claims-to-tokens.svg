@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 700" role="img" aria-label="From claims to tokens">
+<title>From claims to tokens</title>
+  <defs>
+    <filter id="sk-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="3.5"/>
+    </filter>
+    <pattern id="sk-h-blue" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="9" height="9" fill="#dbeafe"/>
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#bcd6f7" stroke-width="1.4"/>
+    </pattern>
+    <pattern id="sk-h-green" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="9" height="9" fill="#d8f3e3"/>
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#b5e6c8" stroke-width="1.4"/>
+    </pattern>
+    <pattern id="sk-h-orange" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="9" height="9" fill="#fdeecb"/>
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#f3d68a" stroke-width="1.4"/>
+    </pattern>
+    <pattern id="sk-h-purple" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="9" height="9" fill="#e7defc"/>
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#c9b8f5" stroke-width="1.4"/>
+    </pattern>
+    <marker id="sk-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#111827"/>
+    </marker>
+    <marker id="sk-arr-big" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="14" markerHeight="14" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#111827"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1400" height="700" fill="#ffffff"/>
+  <g font-family="'Comic Sans MS','Chalkboard SE','Segoe Print','Bradley Hand',cursive">
+    <text x="30" y="44" text-anchor="start" font-size="26" fill="#111827" font-weight="600">From claims to tokens</text>
+    <text x="30" y="76" text-anchor="start" font-size="15" fill="#4b5563">One patient, one timeline: every event becomes a token</text>
+
+    <!-- event cards -->
+    <rect x="40" y="120" width="300" height="150" rx="16" fill="url(#sk-h-blue)" stroke="#1d4ed8" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <text x="190" y="152" text-anchor="middle" font-size="14" fill="#4b5563">2024-05-02</text>
+    <text x="190" y="182" text-anchor="middle" font-size="20" fill="#1d4ed8" font-weight="600">Diagnosis</text>
+    <text x="190" y="214" text-anchor="middle" font-size="17" fill="#111827" font-weight="600">F20.9</text>
+    <text x="190" y="240" text-anchor="middle" font-size="14" fill="#4b5563">Schizophrenia</text>
+
+    <rect x="370" y="120" width="300" height="150" rx="16" fill="url(#sk-h-green)" stroke="#15803d" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <text x="520" y="152" text-anchor="middle" font-size="14" fill="#4b5563">2024-05-02</text>
+    <text x="520" y="182" text-anchor="middle" font-size="20" fill="#15803d" font-weight="600">Prescription</text>
+    <text x="520" y="214" text-anchor="middle" font-size="17" fill="#111827" font-weight="600">Risperidone</text>
+    <text x="520" y="240" text-anchor="middle" font-size="14" fill="#4b5563">antipsychotic</text>
+
+    <rect x="700" y="120" width="300" height="150" rx="16" fill="url(#sk-h-green)" stroke="#15803d" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <text x="850" y="152" text-anchor="middle" font-size="14" fill="#4b5563">2025-11-10</text>
+    <text x="850" y="182" text-anchor="middle" font-size="20" fill="#15803d" font-weight="600">Prescription</text>
+    <text x="850" y="214" text-anchor="middle" font-size="17" fill="#111827" font-weight="600">Olanzapine</text>
+    <text x="850" y="240" text-anchor="middle" font-size="14" fill="#4b5563">antipsychotic</text>
+
+    <rect x="1030" y="120" width="300" height="150" rx="16" fill="url(#sk-h-orange)" stroke="#c2410c" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <text x="1180" y="152" text-anchor="middle" font-size="14" fill="#4b5563">2026-02-20</text>
+    <text x="1180" y="182" text-anchor="middle" font-size="20" fill="#c2410c" font-weight="600">Diagnosis + procedure</text>
+    <text x="1180" y="214" text-anchor="middle" font-size="17" fill="#111827" font-weight="600">Outpatient visit</text>
+    <text x="1180" y="240" text-anchor="middle" font-size="14" fill="#4b5563">diagnosis + procedure codes</text>
+
+    <!-- timeline -->
+    <line x1="70" y1="330" x2="1330" y2="330" stroke="#111827" stroke-width="3" marker-end="url(#sk-arr-big)"/>
+    <line x1="190" y1="270" x2="190" y2="320" stroke="#111827" stroke-width="2"/>
+    <line x1="520" y1="270" x2="520" y2="320" stroke="#111827" stroke-width="2"/>
+    <line x1="850" y1="270" x2="850" y2="320" stroke="#111827" stroke-width="2"/>
+    <line x1="1180" y1="270" x2="1180" y2="320" stroke="#111827" stroke-width="2"/>
+    <circle cx="190" cy="330" r="10" fill="#ffffff" stroke="#111827" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <circle cx="520" cy="330" r="10" fill="#ffffff" stroke="#111827" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <circle cx="850" cy="330" r="10" fill="#ffffff" stroke="#111827" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <circle cx="1180" cy="330" r="10" fill="#ffffff" stroke="#111827" stroke-width="2.5" filter="url(#sk-rough)"/>
+
+    <!-- token chips -->
+    <line x1="190" y1="340" x2="190" y2="368" stroke="#111827" stroke-width="2"/>
+    <line x1="520" y1="340" x2="520" y2="368" stroke="#111827" stroke-width="2"/>
+    <line x1="850" y1="340" x2="850" y2="368" stroke="#111827" stroke-width="2"/>
+    <line x1="1180" y1="340" x2="1180" y2="368" stroke="#111827" stroke-width="2"/>
+    <rect x="100" y="368" width="180" height="58" rx="14" fill="#ffffff" stroke="#1d4ed8" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <text x="190" y="404" text-anchor="middle" font-size="18" fill="#111827" font-weight="600">token 1532</text>
+    <rect x="430" y="368" width="180" height="58" rx="14" fill="#ffffff" stroke="#15803d" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <text x="520" y="404" text-anchor="middle" font-size="18" fill="#111827" font-weight="600">token 8641</text>
+    <rect x="760" y="368" width="180" height="58" rx="14" fill="#ffffff" stroke="#15803d" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <text x="850" y="404" text-anchor="middle" font-size="18" fill="#111827" font-weight="600">token 9102</text>
+    <rect x="1090" y="368" width="180" height="58" rx="14" fill="#ffffff" stroke="#c2410c" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <text x="1180" y="404" text-anchor="middle" font-size="18" fill="#111827" font-weight="600">token 302</text>
+
+    <!-- sequence strip -->
+    <rect x="30" y="480" width="1340" height="80" rx="14" fill="#f3f4f6" stroke="#111827" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <text x="60" y="512" text-anchor="start" font-size="15" fill="#4b5563">one sequence per patient</text>
+    <text x="1370" y="512" text-anchor="end" font-size="15" fill="#4b5563">last 2,048 · right-pad</text>
+    <text x="700" y="540" text-anchor="middle" font-size="24" fill="#111827" font-weight="600">[ 1532 , 8641 , … , 9102 , 302 ]</text>
+
+    <!-- bottom note -->
+    <rect x="30" y="600" width="1340" height="70" rx="14" fill="url(#sk-h-blue)" stroke="#1d4ed8" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <text x="700" y="630" text-anchor="middle" font-size="17" fill="#111827" font-weight="600">OMOP standard vocabulary: every diagnosis, prescription and procedure maps to one token id</text>
+    <text x="700" y="654" text-anchor="middle" font-size="13" fill="#4b5563">spacing schematic, not to scale</text>
+  </g>
+</svg>

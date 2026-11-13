@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 660" role="img" aria-label="Pretrain once, use many times">
+<title>Pretrain once, use many times</title>
+  <defs>
+    <filter id="sk-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="3.5"/>
+    </filter>
+    <pattern id="sk-h-blue" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="9" height="9" fill="#dbeafe"/>
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#bcd6f7" stroke-width="1.4"/>
+    </pattern>
+    <pattern id="sk-h-green" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="9" height="9" fill="#d8f3e3"/>
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#b5e6c8" stroke-width="1.4"/>
+    </pattern>
+    <pattern id="sk-h-orange" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="9" height="9" fill="#fdeecb"/>
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#f3d68a" stroke-width="1.4"/>
+    </pattern>
+    <pattern id="sk-h-purple" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="9" height="9" fill="#e7defc"/>
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#c9b8f5" stroke-width="1.4"/>
+    </pattern>
+    <marker id="sk-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#111827"/>
+    </marker>
+    <marker id="sk-arr-big" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="14" markerHeight="14" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#111827"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1400" height="660" fill="#ffffff"/>
+  <g font-family="'Comic Sans MS','Chalkboard SE','Segoe Print','Bradley Hand',cursive">
+    <text x="30" y="44" text-anchor="start" font-size="26" fill="#111827" font-weight="600">Pretrain once, use many times</text>
+    <text x="30" y="76" text-anchor="start" font-size="15" fill="#4b5563">one backbone, many forecasts</text>
+
+    <!-- pipeline row -->
+    <rect x="20" y="110" width="240" height="110" rx="14" fill="url(#sk-h-blue)" stroke="#1d4ed8" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <text x="140" y="148" text-anchor="middle" font-size="20" fill="#111827" font-weight="600">Pretrain</text>
+    <text x="140" y="174" text-anchor="middle" font-size="14" fill="#4b5563">next-token prediction</text>
+    <text x="140" y="198" text-anchor="middle" font-size="14" fill="#4b5563">millions of patients</text>
+
+    <rect x="300" y="110" width="240" height="110" rx="14" fill="url(#sk-h-purple)" stroke="#6d28d9" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <text x="420" y="148" text-anchor="middle" font-size="20" fill="#111827" font-weight="600">Finetune per head</text>
+    <text x="420" y="174" text-anchor="middle" font-size="14" fill="#4b5563">full backbone tuned</text>
+    <text x="420" y="198" text-anchor="middle" font-size="14" fill="#4b5563">one head per outcome</text>
+
+    <rect x="580" y="110" width="240" height="110" rx="14" fill="url(#sk-h-green)" stroke="#15803d" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <text x="700" y="148" text-anchor="middle" font-size="20" fill="#111827" font-weight="600">Calibrate</text>
+    <text x="700" y="174" text-anchor="middle" font-size="14" fill="#4b5563">forward isotonic</text>
+    <text x="700" y="198" text-anchor="middle" font-size="14" fill="#4b5563">scores become real probabilities</text>
+
+    <rect x="860" y="110" width="240" height="110" rx="14" fill="url(#sk-h-orange)" stroke="#c2410c" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <text x="980" y="148" text-anchor="middle" font-size="20" fill="#111827" font-weight="600">Gate → UC</text>
+    <text x="980" y="174" text-anchor="middle" font-size="14" fill="#4b5563">AUC · ECE · p@k</text>
+    <text x="980" y="198" text-anchor="middle" font-size="14" fill="#4b5563">candidate: @challenger</text>
+
+    <rect x="1140" y="110" width="240" height="110" rx="14" fill="#f3f4f6" stroke="#111827" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <text x="1260" y="148" text-anchor="middle" font-size="20" fill="#111827" font-weight="600">Human promotes</text>
+    <text x="1260" y="174" text-anchor="middle" font-size="14" fill="#4b5563">@challenger → @prod</text>
+    <text x="1260" y="198" text-anchor="middle" font-size="14" fill="#4b5563">a person decides</text>
+
+    <line x1="260" y1="165" x2="296" y2="165" stroke="#111827" stroke-width="2.5" marker-end="url(#sk-arr)"/>
+    <line x1="540" y1="165" x2="576" y2="165" stroke="#111827" stroke-width="2.5" marker-end="url(#sk-arr)"/>
+    <line x1="820" y1="165" x2="856" y2="165" stroke="#111827" stroke-width="2.5" marker-end="url(#sk-arr)"/>
+    <line x1="1100" y1="165" x2="1136" y2="165" stroke="#111827" stroke-width="2.5" marker-end="url(#sk-arr)"/>
+
+    <text x="700" y="272" text-anchor="middle" font-size="18" fill="#111827" font-weight="600">The backbone is trained once. Every outcome reuses it.</text>
+
+    <!-- row 2: patients to field -->
+    <text x="30" y="322" text-anchor="start" font-size="20" fill="#111827" font-weight="600">From patients to the field</text>
+    <rect x="30" y="340" width="380" height="130" rx="14" fill="url(#sk-h-blue)" stroke="#1d4ed8" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <text x="220" y="380" text-anchor="middle" font-size="20" fill="#111827" font-weight="600">Patient probabilities</text>
+    <text x="220" y="408" text-anchor="middle" font-size="14" fill="#4b5563">calibrated, per patient</text>
+    <text x="220" y="432" text-anchor="middle" font-size="14" fill="#4b5563">one number per outcome</text>
+    <line x1="410" y1="405" x2="466" y2="405" stroke="#111827" stroke-width="2.5" marker-end="url(#sk-arr)"/>
+
+    <rect x="470" y="340" width="380" height="130" rx="14" fill="url(#sk-h-purple)" stroke="#6d28d9" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <text x="660" y="380" text-anchor="middle" font-size="20" fill="#111827" font-weight="600">Roll up: HCP Σp</text>
+    <text x="660" y="408" text-anchor="middle" font-size="14" fill="#4b5563">sum over the HCP's patients</text>
+    <text x="660" y="432" text-anchor="middle" font-size="14" fill="#4b5563">one score per HCP</text>
+    <line x1="850" y1="405" x2="906" y2="405" stroke="#111827" stroke-width="2.5" marker-end="url(#sk-arr)"/>
+
+    <rect x="910" y="340" width="460" height="130" rx="14" fill="url(#sk-h-green)" stroke="#15803d" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <text x="1140" y="380" text-anchor="middle" font-size="20" fill="#111827" font-weight="600">Field priority list</text>
+    <text x="1140" y="408" text-anchor="middle" font-size="14" fill="#4b5563">rank HCPs, fill rep capacity</text>
+    <text x="1140" y="432" text-anchor="middle" font-size="14" fill="#4b5563">top first, rest digital only</text>
+
+    <!-- bottom note -->
+    <rect x="30" y="520" width="1340" height="100" rx="14" fill="url(#sk-h-green)" stroke="#15803d" stroke-width="2.5" filter="url(#sk-rough)"/>
+    <text x="700" y="560" text-anchor="middle" font-size="18" fill="#111827" font-weight="600">A probability is only useful if it is calibrated.</text>
+    <text x="700" y="588" text-anchor="middle" font-size="14" fill="#111827">After isotonic, 0.8 means 0.8. The model never ships a raw score.</text>
+  </g>
+</svg>
