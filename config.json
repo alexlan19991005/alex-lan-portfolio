@@ -81,27 +81,27 @@
     "description": "Deeper reads on the areas I work in. Click a card to open its report.",
     "cards": {
       "search": {
-        "tag": "Search",
-        "title": "The anatomy of search ranking",
-        "description": "From query understanding to learning-to-rank: how modern search systems decide what you see first.",
+        "tag": "Genrec",
+        "title": "Genrec Framework for Patient Event/Outcome Forecasting",
+        "description": "Generative transformer system for modeling and forecasting patient timelines from EHRs.",
         "imageAlt": "Abstract geometric line illustration with a green circle, a blue rectangle and a terracotta triangle on a beige background"
       },
       "ads": {
-        "tag": "Ads",
-        "title": "Prediction, pricing, and auctions",
-        "description": "CTR estimation, bid calibration, and the balancing act between revenue and relevance.",
+        "tag": "Recsys",
+        "title": "Multi-Objective Deep Network for Digital Engagement Optimization",
+        "description": "Multi-Objective Network to optimize who, when, and what content to send for BMS digital engagements.",
         "imageAlt": "Abstract geometric illustration with a blue dome, a terracotta column and a green triangle on a beige background"
       },
       "recsys": {
-        "tag": "RecSys",
-        "title": "Patterns in recommendation",
-        "description": "User modeling, graph-based recall, and multi-objective ranking for discovery feeds.",
+        "tag": "Uplift Modeling",
+        "title": "Uplift Modeling for Field Engagement Ranking and Recommendation",
+        "description": "R-Learner Uplift Modeling to estimate outcomes from field outreach and recommend engagement priorities.",
         "imageAlt": "Abstract geometric illustration with a large terracotta segmented circle, overlapping blue and white circles and a green triangle on a beige background"
       },
       "mlops": {
-        "tag": "MLOps",
-        "title": "Shipping models safely",
-        "description": "Feature stores, online serving, A/B testing, and the infrastructure behind production ML.",
+        "tag": "Marketing Mix",
+        "title": "Sequential Modeling Framework for Marketing Mix",
+        "description": "Sequential Modeling to Measure customer- / DMA- level Channel Promotional Effects.",
         "imageAlt": "Abstract geometric illustration with a large terracotta circle, blue panels, green triangles and yellow squares on a cream background"
       }
     }
