@@ -76,9 +76,9 @@
     ]
   },
   "explore": {
-    "label": "// explore",
-    "title": "Learn more.",
-    "description": "Deeper reads on the areas I work in. Click a card to open its report.",
+    "label": "// projects",
+    "title": "My Work & Deliverables.",
+    "description": "Deeper reads on the areas I work in.",
     "cards": {
       "search": {
         "tag": "Genrec",
