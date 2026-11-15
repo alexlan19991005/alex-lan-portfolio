@@ -115,17 +115,17 @@
     "description": "The tools and frameworks I use to build and ship ML systems.",
     "items": [
       "Python",
-      "PyTorch",
-      "TensorFlow",
+      "SQL",
       "Spark",
-      "C++",
-      "SQL / Hive",
-      "Docker / K8s",
-      "Feature Store",
-      "Two-Tower Models",
-      "Learning to Rank",
-      "A/B Testing",
-      "Graph Neural Nets"
+      "Databricks",
+      "MLflow",
+      "Dagster",
+      "Deep Learning",
+      "Multi-Task Learning",
+      "Ranking Algorithms",
+      "Uplift Modeling",
+      "Bandits",
+      "A/B Testing"
     ]
   },
   "reports": {
