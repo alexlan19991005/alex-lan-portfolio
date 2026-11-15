@@ -1819,7 +1819,7 @@ footer p{
   </article>
 </div>
 
-<!-- Résumé — from CV-3 (Oct 2025), the most recent version on file -->
+<!-- Résumé — from CV-4 (Nov 2026), the most recent version on file -->
 <div class="tab-panel" id="panel-cv">
   <article class="report">
     <button class="btn btn-ghost report-back" type="button" data-back-home data-cfg="shared.back"></button>
@@ -1849,7 +1849,6 @@ footer p{
             <li data-cfg-html="resume.jobs.0.bullets.2"></li>
             <li data-cfg-html="resume.jobs.0.bullets.3"></li>
             <li data-cfg-html="resume.jobs.0.bullets.4"></li>
-            <li data-cfg-html="resume.jobs.0.bullets.5"></li>
           </ul>
         </div>
 
@@ -1880,6 +1879,21 @@ footer p{
           </div>
           <ul class="cv-bullets">
             <li data-cfg-html="resume.jobs.2.bullets.0"></li>
+            <li data-cfg-html="resume.jobs.2.bullets.1"></li>
+          </ul>
+        </div>
+
+        <div class="cv-job">
+          <div class="cv-job-head">
+            <span class="cv-company" data-cfg="resume.jobs.3.company"></span>
+            <span class="cv-loc" data-cfg="resume.jobs.3.location"></span>
+          </div>
+          <div class="cv-role-row">
+            <span class="cv-role" data-cfg="resume.jobs.3.role"></span>
+            <span class="cv-date" data-cfg="resume.jobs.3.date"></span>
+          </div>
+          <ul class="cv-bullets">
+            <li data-cfg-html="resume.jobs.3.bullets.0"></li>
           </ul>
         </div>
       </div>
@@ -2000,7 +2014,7 @@ footer p{
         "chip": "Ranking & User Growth",
         "date": "Pre 2023",
         "role": "Various Data Science Internships",
-        "company": "WeightWatchers | Kuaishou Technology",
+        "company": "WeightWatchers | Bytedance | Kuaishou",
         "description": "Assisted the team in evaluating CTR-based ad pricing models, assessing the effectiveness of multi-channel retrieval frameworks, and developing user retention models.",
         "ariaLabel": "View details — Algorithm Engineer, Search",
         "kicker": "Experience · Search",
@@ -2222,7 +2236,7 @@ footer p{
   "resume": {
     "kicker": "Résumé",
     "name": "Alex Lan",
-    "title": "Senior Machine Learning Engineer, AI Predictive Solutions",
+    "title": "Senior Machine Learning Engineer, AI & Predictive Solutions",
     "contact": {
       "location": "Jersey City, NJ",
       "email": "alexlan1005@gmail.com",
@@ -2236,15 +2250,14 @@ footer p{
       {
         "company": "Bristol Myers Squibb",
         "location": "Princeton, NJ",
-        "role": "Senior Machine Learning Engineer, AI Predictive Solutions",
+        "role": "Senior Machine Learning Engineer, AI & Predictive Solutions",
         "date": "Feb 2024 — Present",
         "bullets": [
-          "Contributed to prototyping and scaling ML systems for customer engagement prediction and promotional content personalization; staged rollout showed stronger performance than existing organic and event-driven strategies, supporting deployment across the U.S. portfolio and $9M in annual marketing spend.",
-          "<strong>Field Engagement Recommendation:</strong> Participated in developing uplift modeling framework to estimate the effect of field reach on customers' conversion and usage frequency, built regional optimization algorithms with feedback loop to automate weekly field engagement recommendations; scaled the solution to 6 product lines with development tailored to each product's market landscape and sales structure.",
-          "<strong>Model Evaluation Framework:</strong> Designed the model evaluation framework for the orchestration system, combining time-based offline validation, uplift evaluation (Qini/AUUC), and calibration checks with online holdout and A/B testing, using opt-outs as a guardrail metric to support model release decisions.",
-          "<strong>Digital Engagement Orchestration:</strong> Architected the next-generation digital orchestration system, decoupling channel delivery from uplift modeling and leveraging a shared-bottom multi-task DCN-v2 framework; integrated multi-funnel objectives (clicks/opens, site engagement, and rep follow-up success) to enable robust upper-funnel estimation and facilitate content selection.",
-          "<strong>Content Exploration &amp; Cold-Start Solution:</strong> In support of the AI Content Hub, designed SBERT subject-line embeddings, ID embeddings, and a Thompson sampling bandit framework to address cold start problems and enable exploration of new content, allowing new content to be tested and activated efficiently within the existing digital orchestration system.",
-          "<strong>MLOps &amp; Infra:</strong> Collaborated with the AI Infra team to continuously improve repo tooling: introduced Dagster for pipeline orchestration, Databricks MLflow for experiment tracking, and Lakehouse Monitoring, while enhancing unit and integration test robustness. Established repo-level agent usage guidelines and Skills following enterprise Claude adoption."
+          "Developed and scaled in-house recommendation systems for targeted promotions and personalized content, expanding deployment across the entire U.S. prescriber marketing channel within 15 months and achieving an average 7% NBRx uplift.",
+          "Built causal ML models to prioritize field outreach, using R-learners to estimate incremental conversion likelihood and outreach success probability models to identify high-value targets for field teams.",
+          "Designed the multi-task ranking solution for digital content delivery using an MMoE architecture to predict web session duration, field engagement, and conversion, enabling more accurate measurement of awareness funnel effectiveness.",
+          "Architected the cross-channel optimization framework to translate model outputs into outreach recommendations, balancing field capacity, channel budgets, and engagement frequency constraints; introduced a LinUCB-based contextual bandit to explore content variations and send dates.",
+          "Led the design and prototyping of the claims-based Transformer foundation model, pre-trained through next-token prediction to forecast key oncology events, including treatment failure, toxicity, and metastasis, helping Medical and Patient Support teams identify patients with unmet needs."
         ]
       },
       {
@@ -2253,18 +2266,28 @@ footer p{
         "role": "Data Science Intern, Advanced Analytics",
         "date": "Jun 2023 — Dec 2023",
         "bullets": [
-          "Developed in-house causal inference toolkits for customer- and geo-level campaign efficacy measurement. The toolkit supported six H2 2023 analyses and remains in use and is maintained by the team, reducing reliance on external vendors.",
-          "Standardized customer-level campaign evaluation with config-driven propensity-score matching and inverse-propensity weighting workflows that support multiple modeling algorithms for propensity scoring and automated statistical validation of covariate balance between test and control groups.",
-          "Automated geo-level campaign measurement that takes a campaign window and DMA list as input and outputs difference-in-differences and synthetic control estimates with pre-period fit diagnostics and plots."
+          "Supported organizational initiative to develop in-house analytics capabilities by developing packages and frameworks for major measurement efforts.",
+          "Built an internal package for customer- and geo-level analysis supporting DiD, synthetic control, PSM, and IPW, being adopted for 6 market effectiveness measurements across regional campaigns, speaker events, and co-pay incentives.",
+          "Researched ad-stock calculation, organic baseline estimation, and customer- and DMA-level campaign resolution for marketing mix, laying the foundation for fully in-house quarterly marketing mix analysis after 2024."
         ]
       },
       {
         "company": "WeightWatchers",
         "location": "New York, NY",
-        "role": "Data Science Intern, GTM Science",
+        "role": "Data Science Intern, User Growth",
         "date": "Jan 2023 — May 2023",
         "bullets": [
-          "Supported development of Experience Engine, an ML system that predicts member disengagement risk and content affinity; conducted feature selection and model benchmarking to inform final model selection."
+          "Assisted the team in designing and developing causal ML models for targeted retention incentives, significantly reducing post-incentive unsubscription rates compared with segment-based offers.",
+          "Participated in feature engineering and selection, using Spark to engineer features from app activity, behavioral preference, offline engagement (weight-loss studios), and promotion response data."
+        ]
+      },
+      {
+        "company": "Bytedance",
+        "location": "Beijing, China",
+        "role": "Data Science Intern",
+        "date": "Jan 2022 — Jul 2022",
+        "bullets": [
+          "Partnered with the algorithm team to evaluate multi-channel retrieval performance, analyzing recall efficiency across different retrieval paths and algorithm versions."
         ]
       }
     ],
@@ -2318,7 +2341,8 @@ footer p{
   "footer": {
     "text": "© 2026 Alex Lan. Built with precision."
   }
-}</script>
+}
+</script>
 <script>
 (function(){
   // Resolve a dotted path like "hero.meta.0.label" inside the config object.
