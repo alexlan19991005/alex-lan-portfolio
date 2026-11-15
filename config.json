@@ -49,7 +49,8 @@
         "ariaLabel": "View details — Senior ML Engineer",
         "kicker": "Experience · Ads",
         "area": "Ads ranking",
-        "placeholderNote": "Team, scope, model design, and results."
+        "placeholderNote": "Team, scope, model design, and results.",
+        "summary": "I build the ranking and recommendation systems that decide which prescriber gets which message, and when. The core system is a multi-task model that predicts web session duration, field engagement, and conversion together, so we can measure the top of the funnel instead of guessing at it. On top of that I built the uplift models that rank field outreach: R-learners estimate the incremental effect of a visit, so reps spend time on the HCPs a visit can actually change. A cross-channel optimization framework turns model scores into weekly recommendations, balancing field capacity, channel budgets, and contact frequency, with a contextual bandit exploring new content and send dates. I also led the design of a claims-based Transformer foundation model, pretrained to forecast oncology events such as treatment failure, toxicity, and metastasis, so Medical and Patient Support teams can find patients with unmet needs earlier. The recommendation system now runs across the full U.S. prescriber channel, with an average 7% NBRx uplift."
       },
       {
         "chip": "Ad Measurement",
@@ -60,7 +61,8 @@
         "ariaLabel": "View details — Data Scientist",
         "kicker": "Experience · RecSys",
         "area": "Recommendation",
-        "placeholderNote": "Recall, ranking, and multi-objective trade-offs."
+        "placeholderNote": "Recall, ranking, and multi-objective trade-offs.",
+        "summary": "I helped Novo Nordisk build its own measurement capability instead of buying it from vendors. I built an internal package for customer- and geo-level analysis that runs difference-in-differences, synthetic control, propensity-score matching, and inverse-propensity weighting from one workflow. The team adopted it for six market effectiveness measurements across regional campaigns, speaker events, and co-pay incentives. I also did the research behind marketing mix modeling: ad-stock calculation, organic baseline estimation, and resolving campaigns at the customer and DMA level. That work laid the foundation for fully in-house quarterly marketing mix analysis from 2024 onward."
       },
       {
         "chip": "Ranking & User Growth",
@@ -71,7 +73,8 @@
         "ariaLabel": "View details — Algorithm Engineer, Search",
         "kicker": "Experience · Search",
         "area": "Search relevance",
-        "placeholderNote": "Query understanding, LTR, and the first recall pipeline."
+        "placeholderNote": "Query understanding, LTR, and the first recall pipeline.",
+        "summary": "At WeightWatchers I worked on the models behind retention incentives: causal ML that predicted which members would leave after an incentive, so offers went to the members they could actually keep instead of broad segments. I also did feature engineering and selection with Spark, building features from app activity, behavioral preferences, offline engagement at weight-loss studios, and promotion response. At Bytedance I partnered with the algorithm team to evaluate multi-channel retrieval, comparing recall efficiency across retrieval paths and algorithm versions."
       }
     ]
   },
